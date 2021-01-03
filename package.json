@@ -11,7 +11,8 @@
     "test": "jest",
     "lint": "eslint lib/* __tests__/* --ext .ts",
     "lint:fix": "eslint lib/* __tests__/* --ext .ts --fix",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "tsc"
   },
   "repository": {
     "type": "git",
