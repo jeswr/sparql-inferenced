@@ -1,22 +1,25 @@
-import { incremental, factsToQuads, quadsToFacts, Rule, owl2rl } from 'hylar-core';
+/* eslint-disable no-await-in-loop */
+import {
+  incremental, factsToQuads, quadsToFacts, Rule, owl2rl,
+} from 'hylar-core';
 import type { Quad, Term } from 'rdf-js';
 import type { IQueryResult } from '@comunica/actor-init-sparql';
-import { newEngine } from '@comunica/actor-init-sparql-rdfjs'
-import type { OTerm, Store as N3Store } from 'n3'
+import { newEngine } from '@comunica/actor-init-sparql-rdfjs';
+import type { OTerm, Store as N3Store } from 'n3';
 // TODO: Remove this dependency once this engine is re-integrated with on2ts
 // @ts-ignore
 import { } from 'rdf-validate-shacl';
-import { quadToStringQuad } from 'rdf-string-ttl'
-import md5 from 'md5'
+import { quadToStringQuad } from 'rdf-string-ttl';
+import md5 from 'md5';
 
 interface Store {
   query(q: string): IQueryResult;
   // These functions are not *required* but in cases such as the presence of the
   // n3 store they can be used to optimise performance by avoiding the conversion of
   // changes to an update query
-  addQuads?: N3Store["addQuads"];       //(quads: Quad[]): Promise<void>
-  getQuads?: N3Store["getQuads"];
-  removeQuads?: N3Store["removeQuads"];
+  addQuads?: N3Store['addQuads']; // (quads: Quad[]): Promise<void>
+  getQuads?: N3Store['getQuads'];
+  removeQuads?: N3Store['removeQuads'];
 }
 
 type InferenceFunction = (store: Store) => Quad[];
@@ -28,48 +31,75 @@ interface Rules {
   // returns any inferred triples - this is to
   // allow for the implementation of sh:rule
   other?: InferenceFunction[];
-};
+}
 
 class StoreExtender implements Required<Store> {
   private store: Store;
+
   constructor(store: Store) {
     this.store = store;
   }
 
   query(q: string) {
-    return this.store.query(q)
+    return this.store.query(q);
   }
 
   removeQuads(quads: Quad[]) {
     if (this.store.removeQuads) {
-      this.store.removeQuads(quads)
+      this.store.removeQuads(quads);
     } else {
       // TODO: IMPLEMENT with update query
-      throw new Error('NOT IMPLEMENTED')
+      throw new Error('NOT IMPLEMENTED');
       // this.store.query()
     }
   }
 
   addQuads(quads: Quad[]) {
     if (this.store.addQuads) {
-      this.store.addQuads(quads)
+      this.store.addQuads(quads);
     } else {
       // TODO: IMPLEMENT with update query
-      throw new Error('NOT IMPLEMENTED')
+      throw new Error('NOT IMPLEMENTED');
       // this.store.query()
     }
   }
 
   getQuads(subject: OTerm, predicate: OTerm, object: string | Term | OTerm[] | null, graph: OTerm) {
     if (this.store.getQuads) {
-      return this.store.getQuads(subject, predicate, object, graph)
-    } else {
-      // TODO: IMPLEMENT with construct query
-      throw new Error('NOT IMPLEMENTED')
-      // this.store.query()
+      return this.store.getQuads(subject, predicate, object, graph);
     }
+    // TODO: IMPLEMENT with construct query
+    throw new Error('NOT IMPLEMENTED');
+    // this.store.query()
   }
+}
 
+async function applyHyLAR(
+  inserts: Quad[],
+  deletes: Quad[],
+  explicit: StoreExtender,
+  implicit: StoreExtender,
+  rules: Rule[],
+) {
+  // Step 1: Run Hylar
+  const { additions, deletions } = await incremental(
+    quadsToFacts(inserts),
+    quadsToFacts(deletes),
+    // TODO HANDLE SAME QUADS IN DIFFERENT GRAPHS PROPERLY
+    // - requires changes in quadsToFacts function
+    quadsToFacts(explicit.getQuads(null, null, null, null)),
+    quadsToFacts(implicit.getQuads(null, null, null, null)),
+    rules,
+  );
+
+  // Step 2: Apply Hylar updates
+  implicit.addQuads(factsToQuads(additions).implicit);
+  explicit.addQuads(factsToQuads(additions).explicit);
+
+  implicit.removeQuads(factsToQuads(deletions).implicit);
+  explicit.removeQuads(factsToQuads(deletions).explicit);
+
+  return { additions, deletions };
 }
 
 /**
@@ -88,10 +118,9 @@ export async function incrementalReasoning(
   StoreExplicit: Store,
   StoreImplicit: Store,
   rules: Rule[],
-  constructQueries: string[]
+  constructQueries: string[],
 ) {
   const globalHash: Record<string, boolean> = {};
-
 
   const implicit = new StoreExtender(StoreImplicit);
   const explicit = new StoreExtender(StoreExplicit);
@@ -102,11 +131,11 @@ export async function incrementalReasoning(
 
   // TODO: Refactor this - it shouldn't be here
   function combinedQuery(q: string) {
-    return combinedEngine.query(q, { sources: [implicit, explicit] })
+    return combinedEngine.query(q, { sources: [implicit, explicit] });
   }
 
   while (ins.length > 0 || del.length > 0) {
-    await applyHyLAR(ins, del, explicit, implicit, rules)
+    await applyHyLAR(ins, del, explicit, implicit, rules);
 
     // Step 2: Run construct queries
     ins = [];
@@ -114,19 +143,20 @@ export async function incrementalReasoning(
     const hashes: Record<string, boolean> = {};
 
     for (const query of constructQueries) {
-      const result = await combinedQuery(query)
+      const result = await combinedQuery(query);
       if (result.type !== 'quads') {
-        throw new Error('Quads Expected')
+        throw new Error('Quads Expected');
       }
       const quads = await result.quads(); // TODO: Optimize
       for (const quad of quads) {
-        const stringQuad = quadToStringQuad(quad)
-        const hash = md5(stringQuad.subject + stringQuad.predicate + stringQuad.object + (stringQuad.graph ?? ''))
+        const stringQuad = quadToStringQuad(quad);
+        const hash = md5(stringQuad.subject + stringQuad.predicate + stringQuad.object + (stringQuad.graph ?? ''));
         if (
-          !(hashes[hash] = true)
+          !(hashes[hash])
           && implicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length === 0
           && explicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length === 0
         ) { // TODO: Double check
+          hashes[hash] = true;
           ins.push(quad);
         }
       }
@@ -134,9 +164,11 @@ export async function incrementalReasoning(
 
     if (ins.length > 0 || del.length > 0) {
       // TODO: Optimise & check if needed
-      if (globalHash[md5(Object.keys(hashes).sort().join(''))] = true) {
-        throw new Error('Inferencer has entered an infinite loop')
+      const hash = md5(Object.keys(hashes).sort().join(''));
+      if (globalHash[hash]) {
+        throw new Error('Inferencer has entered an infinite loop');
       }
+      globalHash[hash] = true;
     }
   }
 
@@ -145,53 +177,18 @@ export async function incrementalReasoning(
   // If there are *any* new triples; repeat
 }
 
-async function applyHyLAR(
-  inserts: Quad[],
-  deletes: Quad[],
-  explicit: StoreExtender,
-  implicit: StoreExtender,
-  rules: Rule[]
-) {
-  // Step 1: Run Hylar
-  const { additions, deletions } = await incremental(
-    quadsToFacts(inserts),
-    quadsToFacts(deletes),
-    quadsToFacts(explicit.getQuads(null, null, null, null)), // TODO HANDLE SAME QUADS IN DIFFERENT GRAPHS PROPERLY - requires changes in quadsToFacts function
-    quadsToFacts(implicit.getQuads(null, null, null, null)),
-    rules
-  );
-
-  // Step 2: Apply Hylar updates
-  implicit.addQuads(factsToQuads(additions).implicit)
-  explicit.addQuads(factsToQuads(additions).explicit)
-
-  implicit.removeQuads(factsToQuads(deletions).implicit)
-  explicit.removeQuads(factsToQuads(deletions).explicit)
-
-  return { additions, deletions }
-}
-
-
 // Method to collect *whole* shape in one g
 // If minCount < 1 then optional | optional every line
 
-
-
-`
-CONSTRUCT { ?s ?p ?o }
-WHERE {
-  
-}
-`
 // PREFIX sh: <http://www.w3.org/ns/shacl#>
 // PREFIX ex: <http://example.org/>
 
-// CONSTRUCT { 
+// CONSTRUCT {
 
 // ex:addDocumentAuthor sh:property ?o, ?closed .
 // ?o sh:path ?t .
 
-// } WHERE { 
+// } WHERE {
 
 // ex:addDocumentAuthor sh:property ?o, ?closed .
 // ?o sh:path ?t .

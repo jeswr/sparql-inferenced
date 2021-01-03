@@ -2,10 +2,15 @@
   "name": "sparql-inferenced",
   "version": "1.0.0",
   "description": "An RDF inferencer that extends the HyLAR (https://github.com/ucbl/HyLAR-Reasoner.git) inferencing engine to allow inferencing with SPARQL Construct queries",
-  "main": "index.js",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.js",
+  "files": [
+    "dist/lib/*"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint lib/* __tests__/* --ext .ts",
+    "lint:fix": "eslint lib/* __tests__/* --ext .ts --fix",
     "build": "tsc"
   },
   "repository": {
