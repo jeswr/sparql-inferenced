@@ -25,16 +25,24 @@
   },
   "homepage": "https://github.com/jeswr/sparql-inferenced#readme",
   "dependencies": {
+    "@comunica/actor-init-sparql-rdfjs": "^1.18.1",
+    "hylar-core": "github:jeswr/hylar-core",
+    "md5": "^2.3.0",
+    "rdf-string-ttl": "^1.1.0",
     "rdf-validate-shacl": "^0.2.5"
   },
   "devDependencies": {
+    "@comunica/actor-init-sparql": "^1.18.1",
     "@types/jest": "^26.0.19",
+    "@types/md5": "^2.2.1",
+    "@types/n3": "^1.4.4",
     "@typescript-eslint/eslint-plugin": "^4.11.1",
     "@typescript-eslint/parser": "^4.11.1",
     "eslint": "^7.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
+    "n3": "^1.6.4",
     "pre-commit": "^1.2.2",
     "rdf-js": "^1.0.2",
     "ts-jest": "^26.4.4"
