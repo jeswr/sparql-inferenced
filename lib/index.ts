@@ -77,8 +77,8 @@ class StoreExtender implements Required<Store> {
 async function applyHyLAR(
   inserts: Quad[],
   deletes: Quad[],
-  explicit: StoreExtender,
-  implicit: StoreExtender,
+  explicit: N3Store,
+  implicit: N3Store,
   rules: Rule[],
 ) {
   // Step 1: Run Hylar
@@ -115,15 +115,15 @@ async function applyHyLAR(
 export async function incrementalReasoning(
   inserts: Quad[] = [],
   deletes: Quad[] = [],
-  StoreExplicit: Store,
-  StoreImplicit: Store,
+  explicit: N3Store,
+  implicit: N3Store,
   rules: Rule[],
   constructQueries: string[],
 ) {
   const globalHash: Record<string, boolean> = {};
 
-  const implicit = new StoreExtender(StoreImplicit);
-  const explicit = new StoreExtender(StoreExplicit);
+  // const implicit = new StoreExtender(StoreImplicit);
+  // const explicit = new StoreExtender(StoreExplicit);
   const combinedEngine = newEngine();
 
   let ins = inserts;
