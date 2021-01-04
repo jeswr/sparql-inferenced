@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { Store, Parser } from 'n3'
+import { Store, Parser, Writer } from 'n3'
 import { incrementalReasoning } from '../lib'
 import { owl2rl } from 'hylar-core'
 import * as fs from 'fs';
@@ -30,14 +30,36 @@ describe('Should run test', () => {
     const parser = new Parser();
      
     const originalQuads = parser.parse(fs.readFileSync(path.join(__dirname, 'files', 'shacl.ttl')).toString())
+    // console.log(originalQuads)
 
     await incrementalReasoning(originalQuads, [], explicit, implicit, owl2rl, [])
+    // TODO: Fix issue - reasoner not handling literals
+    // explicit.addQuads(originalQuads)
+
+    const writer = new Writer({
+      end: true
+    });
+    writer.addQuads(implicit.getQuads(null, null, null, null))
+    writer.addPrefixes({
+      'sh': namedNode('http://www.w3.org/ns/shacl#'),
+      'rdf': namedNode('http://www.w3.org/1999/02/22-rdf-syntax-ns#'),
+      'rdfs': namedNode('http://www.w3.org/2000/01/rdf-schema#'),
+      'owl': namedNode('http://http://www.w3.org/2002/07/owl#'),
+      'xsd': namedNode('http://www.w3.org/2001/XMLSchema#')
+    })
+
+
+    fs.writeFileSync(path.join(__dirname, 'out.ttl'), writer.quadsToString(implicit.getQuads(null, null, null, null)))
+    fs.writeFileSync(path.join(__dirname, 'out-explicit.ttl'), writer.quadsToString(explicit.getQuads(null, null, null, null)))
+    // fs.watchFile('out.ttl', undefined, () => {})
 
     const toAdd = [
       quad(namedNode('http://example.org/myShape'), namedNode('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), namedNode('http://www.w3.org/ns/shacl#NodeShape')),
       quad(namedNode('http://example.org/myShape'), namedNode('http://www.w3.org/ns/shacl#property'), blankNode('99999999999')),
       quad(blankNode('99999999999'), namedNode('http://www.w3.org/ns/shacl#path'), namedNode('http://example.org/myPath')),
     ];
+
+
 
     expect(explicit.getQuads(null, null, null, null).length).toEqual(1128);
     // expect(implicit.getQuads(null, null, null, null).length).toEqual(427);

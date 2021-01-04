@@ -93,6 +93,8 @@ async function applyHyLAR(
   );
 
   // Step 2: Apply Hylar updates
+  console.log('additions', additions)
+
   implicit.addQuads(factsToQuads(additions).implicit);
   explicit.addQuads(factsToQuads(additions).explicit);
 

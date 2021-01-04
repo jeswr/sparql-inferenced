@@ -1,0 +1,1128 @@
+<><> <http://www.w3.org/ns/shacl#> rdf:type .
+<><> <http://www.w3.org/2002/07/owl#Ontology> rdfs:label .
+<><> <W3C Shapes Constraint Language (SHACL) Vocabulary> rdfs:comment .
+<><> sh:namespace <This vocabulary defines terms used in SHACL, the W3C Shapes Constraint Language.> .
+<><> sh:declare sh:suggestedShapesGraph .
+<This vocabulary defines terms used in SHACL, the W3C Shapes Constraint Language.> <n3-0> sh:prefix .
+<This vocabulary defines terms used in SHACL, the W3C Shapes Constraint Language.> <sh> <><> .
+<n3-0> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<n3-0> <http://www.w3.org/2002/07/owl#Ontology> <prefix> .
+<n3-0> <W3C Shapes Constraint Language (SHACL) Vocabulary> <The prefix of a prefix declaration.> .
+<n3-0> rdfs:Resource <><> .
+<n3-0> <If set to true then all nodes conform to this.> xsd:string .
+<n3-0> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:PrefixDeclaration .
+<sh> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<sh> <http://www.w3.org/2002/07/owl#Ontology> <namespace> .
+<sh> <W3C Shapes Constraint Language (SHACL) Vocabulary> <The namespace associated with a prefix in a prefix declaration.> .
+<sh> rdfs:Resource <><> .
+<sh> <If set to true then all nodes conform to this.> xsd:anyURI .
+<sh> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:PrefixDeclaration .
+sh:namespace <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:namespace <http://www.w3.org/2002/07/owl#Ontology> <declare> .
+sh:namespace <W3C Shapes Constraint Language (SHACL) Vocabulary> <Links a resource with its namespace prefix declarations.> .
+sh:namespace rdfs:Resource <><> .
+sh:namespace <If set to true then all nodes conform to this.> sh:PrefixDeclaration .
+sh:namespace <Links a shape to a class, indicating that all instances of the class must conform to the shape.> rdf:type .
+sh:declare <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:declare <http://www.w3.org/2002/07/owl#Ontology> <Shapes graphs that should be used when validating this data graph.> .
+sh:declare <W3C Shapes Constraint Language (SHACL) Vocabulary> <suggested shapes graph> .
+sh:declare rdfs:Resource <><> .
+sh:declare <If set to true then all nodes conform to this.> rdf:type .
+sh:declare <Links a shape to a class, indicating that all instances of the class must conform to the shape.> rdf:type .
+<http://www.w3.org/ns/shacl-shacl#> <http://www.w3.org/ns/shacl#> sh:Shape .
+<http://www.w3.org/ns/shacl-shacl#> <http://www.w3.org/2002/07/owl#Ontology> rdfs:Class .
+<http://www.w3.org/ns/shacl-shacl#> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Shape> .
+<http://www.w3.org/ns/shacl-shacl#> <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+<http://www.w3.org/ns/shacl-shacl#> rdfs:Resource <><> .
+rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> sh:Shape .
+rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#Ontology> sh:NodeShape .
+rdfs:isDefinedBy <W3C Shapes Constraint Language (SHACL) Vocabulary> <Node shape> .
+rdfs:isDefinedBy <A shape is a collection of constraints that may be targeted for certain nodes.> <http://www.w3.org/ns/shacl-shacl#> .
+rdfs:isDefinedBy rdfs:Resource <><> .
+<A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> <http://www.w3.org/2002/07/owl#Ontology> sh:PropertyShape .
+<A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Property shape> .
+<A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> <A shape is a collection of constraints that may be targeted for certain nodes.> <http://www.w3.org/ns/shacl-shacl#> .
+<A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> rdfs:Resource <><> .
+<A property shape is a shape that specifies constraints on the values of a focus node for a given property or path.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<A property shape is a shape that specifies constraints on the values of a focus node for a given property or path.> <http://www.w3.org/2002/07/owl#Ontology> rdf:Property .
+<A property shape is a shape that specifies constraints on the values of a focus node for a given property or path.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <deactivated> .
+<A property shape is a shape that specifies constraints on the values of a focus node for a given property or path.> rdfs:Resource <><> .
+<A property shape is a shape that specifies constraints on the values of a focus node for a given property or path.> <If set to true then all nodes conform to this.> rdfs:range .
+xsd:boolean <http://www.w3.org/ns/shacl#> sh:deactivated .
+xsd:boolean <http://www.w3.org/2002/07/owl#Ontology> sh:targetClass .
+xsd:boolean <W3C Shapes Constraint Language (SHACL) Vocabulary> <target class> .
+xsd:boolean rdfs:Resource <><> .
+xsd:boolean <If set to true then all nodes conform to this.> sh:Shape .
+xsd:boolean <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <http://www.w3.org/ns/shacl-shacl#> .
+rdfs:domain <http://www.w3.org/ns/shacl#> sh:deactivated .
+rdfs:domain <http://www.w3.org/2002/07/owl#Ontology> sh:targetNode .
+rdfs:domain <W3C Shapes Constraint Language (SHACL) Vocabulary> <target node> .
+rdfs:domain rdfs:Resource <><> .
+rdfs:domain <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <http://www.w3.org/ns/shacl-shacl#> .
+<Links a shape to individual nodes, indicating that these nodes must conform to the shape.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<Links a shape to individual nodes, indicating that these nodes must conform to the shape.> <http://www.w3.org/2002/07/owl#Ontology> sh:targetObjectsOf .
+<Links a shape to individual nodes, indicating that these nodes must conform to the shape.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <target objects of> .
+<Links a shape to individual nodes, indicating that these nodes must conform to the shape.> rdfs:Resource <><> .
+<Links a shape to individual nodes, indicating that these nodes must conform to the shape.> <If set to true then all nodes conform to this.> sh:deactivated .
+<Links a shape to individual nodes, indicating that these nodes must conform to the shape.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <http://www.w3.org/ns/shacl-shacl#> .
+<Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape.> <http://www.w3.org/2002/07/owl#Ontology> sh:targetSubjectsOf .
+<Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <target subjects of> .
+<Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape.> rdfs:Resource <><> .
+<Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape.> <If set to true then all nodes conform to this.> sh:deactivated .
+<Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <http://www.w3.org/ns/shacl-shacl#> .
+<Links a shape to a property, indicating that all subjects of triples that have the given property as their predicate must conform to the shape.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<Links a shape to a property, indicating that all subjects of triples that have the given property as their predicate must conform to the shape.> <http://www.w3.org/2002/07/owl#Ontology> sh:message .
+<Links a shape to a property, indicating that all subjects of triples that have the given property as their predicate must conform to the shape.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <message> .
+<Links a shape to a property, indicating that all subjects of triples that have the given property as their predicate must conform to the shape.> rdfs:Resource <><> .
+<A human-readable message (possibly with placeholders for variables) explaining the cause of the result.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<A human-readable message (possibly with placeholders for variables) explaining the cause of the result.> <http://www.w3.org/2002/07/owl#Ontology> sh:severity .
+<A human-readable message (possibly with placeholders for variables) explaining the cause of the result.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <severity> .
+<A human-readable message (possibly with placeholders for variables) explaining the cause of the result.> rdfs:Resource <><> .
+<A human-readable message (possibly with placeholders for variables) explaining the cause of the result.> <If set to true then all nodes conform to this.> <Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> .
+<A human-readable message (possibly with placeholders for variables) explaining the cause of the result.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <http://www.w3.org/ns/shacl-shacl#> .
+<Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> <http://www.w3.org/2002/07/owl#Ontology> <The class of validation results.> .
+<Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Severity> .
+<Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+<Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> rdfs:Resource <><> .
+sh:Severity <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:Severity <http://www.w3.org/2002/07/owl#Ontology> sh:NodeKind .
+sh:Severity <W3C Shapes Constraint Language (SHACL) Vocabulary> <Node kind> .
+sh:Severity <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+sh:Severity rdfs:Resource <><> .
+<The class of all node kinds, including sh:BlankNode, sh:IRI, sh:Literal or the combinations of these: sh:BlankNodeOrIRI, sh:BlankNodeOrLiteral, sh:IRIOrLiteral.> <http://www.w3.org/ns/shacl#> sh:Severity .
+<The class of all node kinds, including sh:BlankNode, sh:IRI, sh:Literal or the combinations of these: sh:BlankNodeOrIRI, sh:BlankNodeOrLiteral, sh:IRIOrLiteral.> <http://www.w3.org/2002/07/owl#Ontology> sh:BlankNode .
+<The class of all node kinds, including sh:BlankNode, sh:IRI, sh:Literal or the combinations of these: sh:BlankNodeOrIRI, sh:BlankNodeOrLiteral, sh:IRIOrLiteral.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Blank node> .
+<The class of all node kinds, including sh:BlankNode, sh:IRI, sh:Literal or the combinations of these: sh:BlankNodeOrIRI, sh:BlankNodeOrLiteral, sh:IRIOrLiteral.> rdfs:Resource <><> .
+<The node kind of all blank nodes.> <http://www.w3.org/ns/shacl#> sh:Severity .
+<The node kind of all blank nodes.> <http://www.w3.org/2002/07/owl#Ontology> sh:BlankNodeOrIRI .
+<The node kind of all blank nodes.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Blank node or IRI> .
+<The node kind of all blank nodes.> rdfs:Resource <><> .
+<The node kind of all blank nodes or IRIs.> <http://www.w3.org/ns/shacl#> sh:Severity .
+<The node kind of all blank nodes or IRIs.> <http://www.w3.org/2002/07/owl#Ontology> sh:BlankNodeOrLiteral .
+<The node kind of all blank nodes or IRIs.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Blank node or literal> .
+<The node kind of all blank nodes or IRIs.> rdfs:Resource <><> .
+<The node kind of all blank nodes or literals.> <http://www.w3.org/ns/shacl#> sh:Severity .
+<The node kind of all blank nodes or literals.> <http://www.w3.org/2002/07/owl#Ontology> sh:IRI .
+<The node kind of all blank nodes or literals.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <IRI> .
+<The node kind of all blank nodes or literals.> rdfs:Resource <><> .
+<The node kind of all IRIs.> <http://www.w3.org/ns/shacl#> sh:Severity .
+<The node kind of all IRIs.> <http://www.w3.org/2002/07/owl#Ontology> sh:IRIOrLiteral .
+<The node kind of all IRIs.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <IRI or literal> .
+<The node kind of all IRIs.> rdfs:Resource <><> .
+<The node kind of all IRIs or literals.> <http://www.w3.org/ns/shacl#> sh:Severity .
+<The node kind of all IRIs or literals.> <http://www.w3.org/2002/07/owl#Ontology> sh:Literal .
+<The node kind of all IRIs or literals.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Literal> .
+<The node kind of all IRIs or literals.> rdfs:Resource <><> .
+<The node kind of all literals.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<The node kind of all literals.> <http://www.w3.org/2002/07/owl#Ontology> sh:ValidationReport .
+<The node kind of all literals.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Validation report> .
+<The node kind of all literals.> <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+<The node kind of all literals.> rdfs:Resource <><> .
+<The class of SHACL validation reports.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The class of SHACL validation reports.> <http://www.w3.org/2002/07/owl#Ontology> sh:conforms .
+<The class of SHACL validation reports.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <conforms> .
+<The class of SHACL validation reports.> rdfs:Resource <><> .
+<The class of SHACL validation reports.> <If set to true then all nodes conform to this.> rdfs:range .
+<The class of SHACL validation reports.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The node kind of all literals.> .
+<True if the validation did not produce any validation results, and false otherwise.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<True if the validation did not produce any validation results, and false otherwise.> <http://www.w3.org/2002/07/owl#Ontology> sh:result .
+<True if the validation did not produce any validation results, and false otherwise.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <result> .
+<True if the validation did not produce any validation results, and false otherwise.> rdfs:Resource <><> .
+<True if the validation did not produce any validation results, and false otherwise.> <If set to true then all nodes conform to this.> <The validation results contained in a validation report.> .
+<True if the validation did not produce any validation results, and false otherwise.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The node kind of all literals.> .
+<The validation results contained in a validation report.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<The validation results contained in a validation report.> <http://www.w3.org/2002/07/owl#Ontology> <The base class of validation results, typically not instantiated directly.> .
+<The validation results contained in a validation report.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Validation result> .
+<The validation results contained in a validation report.> <A shape is a collection of constraints that may be targeted for certain nodes.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<The validation results contained in a validation report.> rdfs:Resource <><> .
+sh:ValidationResult <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:ValidationResult <http://www.w3.org/2002/07/owl#Ontology> sh:shapesGraphWellFormed .
+sh:ValidationResult <W3C Shapes Constraint Language (SHACL) Vocabulary> <shapes graph well-formed> .
+sh:ValidationResult rdfs:Resource <><> .
+sh:ValidationResult <If set to true then all nodes conform to this.> rdfs:range .
+sh:ValidationResult <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The node kind of all literals.> .
+<If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> <http://www.w3.org/2002/07/owl#Ontology> sh:AbstractResult .
+<If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Abstract result> .
+<If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+<If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> rdfs:Resource <><> .
+<The class of validation result severity levels, including violation and warning levels.> <http://www.w3.org/ns/shacl#> <Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> .
+<The class of validation result severity levels, including violation and warning levels.> <http://www.w3.org/2002/07/owl#Ontology> sh:Info .
+<The class of validation result severity levels, including violation and warning levels.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Info> .
+<The class of validation result severity levels, including violation and warning levels.> rdfs:Resource <><> .
+<The severity for an informational validation result.> <http://www.w3.org/ns/shacl#> <Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> .
+<The severity for an informational validation result.> <http://www.w3.org/2002/07/owl#Ontology> sh:Violation .
+<The severity for an informational validation result.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Violation> .
+<The severity for an informational validation result.> rdfs:Resource <><> .
+<The severity for a violation validation result.> <http://www.w3.org/ns/shacl#> <Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> .
+<The severity for a violation validation result.> <http://www.w3.org/2002/07/owl#Ontology> sh:Warning .
+<The severity for a violation validation result.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Warning> .
+<The severity for a violation validation result.> rdfs:Resource <><> .
+<The severity for a warning validation result.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The severity for a warning validation result.> <http://www.w3.org/2002/07/owl#Ontology> sh:detail .
+<The severity for a warning validation result.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <detail> .
+<The severity for a warning validation result.> rdfs:Resource <><> .
+<The severity for a warning validation result.> <If set to true then all nodes conform to this.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<The severity for a warning validation result.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<Links a result with other results that provide more details, for example to describe violations against nested shapes.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<Links a result with other results that provide more details, for example to describe violations against nested shapes.> <http://www.w3.org/2002/07/owl#Ontology> sh:focusNode .
+<Links a result with other results that provide more details, for example to describe violations against nested shapes.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <focus node> .
+<Links a result with other results that provide more details, for example to describe violations against nested shapes.> rdfs:Resource <><> .
+<Links a result with other results that provide more details, for example to describe violations against nested shapes.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<The focus node that was validated when the result was produced.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The focus node that was validated when the result was produced.> <http://www.w3.org/2002/07/owl#Ontology> sh:resultMessage .
+<The focus node that was validated when the result was produced.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <result message> .
+<The focus node that was validated when the result was produced.> rdfs:Resource <><> .
+<The focus node that was validated when the result was produced.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<Human-readable messages explaining the cause of the result.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<Human-readable messages explaining the cause of the result.> <http://www.w3.org/2002/07/owl#Ontology> sh:resultPath .
+<Human-readable messages explaining the cause of the result.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <result path> .
+<Human-readable messages explaining the cause of the result.> rdfs:Resource <><> .
+<Human-readable messages explaining the cause of the result.> <If set to true then all nodes conform to this.> rdfs:subClassOf .
+<Human-readable messages explaining the cause of the result.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<The path of a validation result, based on the path of the validated property shape.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The path of a validation result, based on the path of the validated property shape.> <http://www.w3.org/2002/07/owl#Ontology> sh:resultSeverity .
+<The path of a validation result, based on the path of the validated property shape.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <result severity> .
+<The path of a validation result, based on the path of the validated property shape.> rdfs:Resource <><> .
+<The path of a validation result, based on the path of the validated property shape.> <If set to true then all nodes conform to this.> <Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.> .
+<The path of a validation result, based on the path of the validated property shape.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<The severity of the result, e.g. warning.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The severity of the result, e.g. warning.> <http://www.w3.org/2002/07/owl#Ontology> sh:sourceConstraint .
+<The severity of the result, e.g. warning.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <source constraint> .
+<The severity of the result, e.g. warning.> rdfs:Resource <><> .
+<The severity of the result, e.g. warning.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<The constraint that was validated when the result was produced.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The constraint that was validated when the result was produced.> <http://www.w3.org/2002/07/owl#Ontology> sh:sourceShape .
+<The constraint that was validated when the result was produced.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <source shape> .
+<The constraint that was validated when the result was produced.> rdfs:Resource <><> .
+<The constraint that was validated when the result was produced.> <If set to true then all nodes conform to this.> <http://www.w3.org/ns/shacl-shacl#> .
+<The constraint that was validated when the result was produced.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<The shape that is was validated when the result was produced.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The shape that is was validated when the result was produced.> <http://www.w3.org/2002/07/owl#Ontology> sh:sourceConstraintComponent .
+<The shape that is was validated when the result was produced.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <source constraint component> .
+<The shape that is was validated when the result was produced.> rdfs:Resource <><> .
+<The shape that is was validated when the result was produced.> <If set to true then all nodes conform to this.> <The constraint component that is the source of the result.> .
+<The shape that is was validated when the result was produced.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<The constraint component that is the source of the result.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<The constraint component that is the source of the result.> <http://www.w3.org/2002/07/owl#Ontology> <Indicates whether a parameter is optional.> .
+<The constraint component that is the source of the result.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Constraint component> .
+<The constraint component that is the source of the result.> <A shape is a collection of constraints that may be targeted for certain nodes.> <The (single) value of this property represents a path that is matched zero or one times.> .
+<The constraint component that is the source of the result.> rdfs:Resource <><> .
+sh:ConstraintComponent <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:ConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> sh:value .
+sh:ConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <value> .
+sh:ConstraintComponent rdfs:Resource <><> .
+sh:ConstraintComponent <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.> .
+<An RDF node that has caused the result.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<An RDF node that has caused the result.> <http://www.w3.org/2002/07/owl#Ontology> sh:shapesGraph .
+<An RDF node that has caused the result.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <shapes graph> .
+<An RDF node that has caused the result.> rdfs:Resource <><> .
+<An RDF node that has caused the result.> <If set to true then all nodes conform to this.> rdf:type .
+<An RDF node that has caused the result.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> rdf:type .
+<Suggested shapes graphs for this ontology. The values of this property may be used in the absence of specific sh:shapesGraph statements.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<Suggested shapes graphs for this ontology. The values of this property may be used in the absence of specific sh:shapesGraph statements.> <http://www.w3.org/2002/07/owl#Ontology> sh:entailment .
+<Suggested shapes graphs for this ontology. The values of this property may be used in the absence of specific sh:shapesGraph statements.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <entailment> .
+<Suggested shapes graphs for this ontology. The values of this property may be used in the absence of specific sh:shapesGraph statements.> rdfs:Resource <><> .
+<Suggested shapes graphs for this ontology. The values of this property may be used in the absence of specific sh:shapesGraph statements.> <If set to true then all nodes conform to this.> rdfs:subClassOf .
+<Suggested shapes graphs for this ontology. The values of this property may be used in the absence of specific sh:shapesGraph statements.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> rdf:type .
+<An entailment regime that indicates what kind of inferencing is required by a shapes graph.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<An entailment regime that indicates what kind of inferencing is required by a shapes graph.> <http://www.w3.org/2002/07/owl#Ontology> sh:path .
+<An entailment regime that indicates what kind of inferencing is required by a shapes graph.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <path> .
+<An entailment regime that indicates what kind of inferencing is required by a shapes graph.> rdfs:Resource <><> .
+<An entailment regime that indicates what kind of inferencing is required by a shapes graph.> <If set to true then all nodes conform to this.> rdfs:subClassOf .
+<An entailment regime that indicates what kind of inferencing is required by a shapes graph.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> .
+<Specifies the property path of a property shape.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<Specifies the property path of a property shape.> <http://www.w3.org/2002/07/owl#Ontology> sh:inversePath .
+<Specifies the property path of a property shape.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <inverse path> .
+<Specifies the property path of a property shape.> rdfs:Resource <><> .
+<Specifies the property path of a property shape.> <If set to true then all nodes conform to this.> rdfs:subClassOf .
+<The (single) value of this property represents an inverse path (object to subject).> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The (single) value of this property represents an inverse path (object to subject).> <http://www.w3.org/2002/07/owl#Ontology> sh:alternativePath .
+<The (single) value of this property represents an inverse path (object to subject).> <W3C Shapes Constraint Language (SHACL) Vocabulary> <alternative path> .
+<The (single) value of this property represents an inverse path (object to subject).> rdfs:Resource <><> .
+<The (single) value of this property represents an inverse path (object to subject).> <If set to true then all nodes conform to this.> <The (single) value of this property must be a list of path elements, representing the elements of alternative paths.> .
+rdf:List <http://www.w3.org/ns/shacl#> sh:deactivated .
+rdf:List <http://www.w3.org/2002/07/owl#Ontology> sh:zeroOrMorePath .
+rdf:List <W3C Shapes Constraint Language (SHACL) Vocabulary> <zero or more path> .
+rdf:List rdfs:Resource <><> .
+rdf:List <If set to true then all nodes conform to this.> rdfs:subClassOf .
+<The (single) value of this property represents a path that is matched zero or more times.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The (single) value of this property represents a path that is matched zero or more times.> <http://www.w3.org/2002/07/owl#Ontology> sh:oneOrMorePath .
+<The (single) value of this property represents a path that is matched zero or more times.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <one or more path> .
+<The (single) value of this property represents a path that is matched zero or more times.> rdfs:Resource <><> .
+<The (single) value of this property represents a path that is matched zero or more times.> <If set to true then all nodes conform to this.> rdfs:subClassOf .
+<The (single) value of this property represents a path that is matched one or more times.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The (single) value of this property represents a path that is matched one or more times.> <http://www.w3.org/2002/07/owl#Ontology> sh:zeroOrOnePath .
+<The (single) value of this property represents a path that is matched one or more times.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <zero or one path> .
+<The (single) value of this property represents a path that is matched one or more times.> rdfs:Resource <><> .
+<The (single) value of this property represents a path that is matched one or more times.> <If set to true then all nodes conform to this.> rdfs:subClassOf .
+<The (single) value of this property represents a path that is matched zero or one times.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<The (single) value of this property represents a path that is matched zero or one times.> <http://www.w3.org/2002/07/owl#Ontology> sh:Parameterizable .
+<The (single) value of this property represents a path that is matched zero or one times.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Parameterizable> .
+<The (single) value of this property represents a path that is matched zero or one times.> <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+<The (single) value of this property represents a path that is matched zero or one times.> rdfs:Resource <><> .
+<Superclass of components that can take parameters, especially functions and constraint components.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<Superclass of components that can take parameters, especially functions and constraint components.> <http://www.w3.org/2002/07/owl#Ontology> sh:parameter .
+<Superclass of components that can take parameters, especially functions and constraint components.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <parameter> .
+<Superclass of components that can take parameters, especially functions and constraint components.> rdfs:Resource <><> .
+<Superclass of components that can take parameters, especially functions and constraint components.> <If set to true then all nodes conform to this.> <The parameters of a function or constraint component.> .
+<Superclass of components that can take parameters, especially functions and constraint components.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The (single) value of this property represents a path that is matched zero or one times.> .
+<The parameters of a function or constraint component.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<The parameters of a function or constraint component.> <http://www.w3.org/2002/07/owl#Ontology> <Outlines how human-readable labels of instances of the associated Parameterizable shall be produced. The values can contain {?paramName} as placeholders for the actual values of the given parameter.> .
+<The parameters of a function or constraint component.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Parameter> .
+<The parameters of a function or constraint component.> <A shape is a collection of constraints that may be targeted for certain nodes.> <A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> .
+<The parameters of a function or constraint component.> rdfs:Resource <><> .
+sh:Parameter <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:Parameter <http://www.w3.org/2002/07/owl#Ontology> sh:labelTemplate .
+sh:Parameter <W3C Shapes Constraint Language (SHACL) Vocabulary> <label template> .
+sh:Parameter rdfs:Resource <><> .
+sh:Parameter <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The (single) value of this property represents a path that is matched zero or one times.> .
+<The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> <http://www.w3.org/2002/07/owl#Ontology> sh:optional .
+<The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <optional> .
+<The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> rdfs:Resource <><> .
+<The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> <If set to true then all nodes conform to this.> rdfs:range .
+<The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The parameters of a function or constraint component.> .
+<The class of constraint components.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The class of constraint components.> <http://www.w3.org/2002/07/owl#Ontology> sh:validator .
+<The class of constraint components.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <validator> .
+<The class of constraint components.> rdfs:Resource <><> .
+<The class of constraint components.> <If set to true then all nodes conform to this.> <The validator(s) used to evaluate constraints of either node or property shapes.> .
+<The class of constraint components.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The constraint component that is the source of the result.> .
+<The validator(s) used to evaluate constraints of either node or property shapes.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<The validator(s) used to evaluate constraints of either node or property shapes.> <http://www.w3.org/2002/07/owl#Ontology> <The validator(s) used to evaluate a constraint in the context of a property shape.> .
+<The validator(s) used to evaluate constraints of either node or property shapes.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Validator> .
+<The validator(s) used to evaluate constraints of either node or property shapes.> <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+<The validator(s) used to evaluate constraints of either node or property shapes.> rdfs:Resource <><> .
+sh:Validator <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:Validator <http://www.w3.org/2002/07/owl#Ontology> sh:nodeValidator .
+sh:Validator <W3C Shapes Constraint Language (SHACL) Vocabulary> <shape validator> .
+sh:Validator rdfs:Resource <><> .
+sh:Validator <If set to true then all nodes conform to this.> <The validator(s) used to evaluate constraints of either node or property shapes.> .
+sh:Validator <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The constraint component that is the source of the result.> .
+<The validator(s) used to evaluate a constraint in the context of a node shape.> <http://www.w3.org/ns/shacl#> sh:deactivated .
+<The validator(s) used to evaluate a constraint in the context of a node shape.> <http://www.w3.org/2002/07/owl#Ontology> sh:propertyValidator .
+<The validator(s) used to evaluate a constraint in the context of a node shape.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <property validator> .
+<The validator(s) used to evaluate a constraint in the context of a node shape.> rdfs:Resource <><> .
+<The validator(s) used to evaluate a constraint in the context of a node shape.> <If set to true then all nodes conform to this.> <The validator(s) used to evaluate constraints of either node or property shapes.> .
+<The validator(s) used to evaluate a constraint in the context of a node shape.> <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The constraint component that is the source of the result.> .
+<The class of validators, which provide instructions on how to process a constraint definition. This class serves as base class for the SPARQL-based validators and other possible implementations.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<The class of validators, which provide instructions on how to process a constraint definition. This class serves as base class for the SPARQL-based validators and other possible implementations.> <http://www.w3.org/2002/07/owl#Ontology> sh:SPARQLAskValidator .
+<The class of validators, which provide instructions on how to process a constraint definition. This class serves as base class for the SPARQL-based validators and other possible implementations.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <SPARQL ASK validator> .
+<The class of validators, which provide instructions on how to process a constraint definition. This class serves as base class for the SPARQL-based validators and other possible implementations.> <A shape is a collection of constraints that may be targeted for certain nodes.> <The validator(s) used to evaluate constraints of either node or property shapes.> .
+<The class of validators, which provide instructions on how to process a constraint definition. This class serves as base class for the SPARQL-based validators and other possible implementations.> <A shape is a collection of constraints that may be targeted for certain nodes.> <The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> .
+<The class of validators, which provide instructions on how to process a constraint definition. This class serves as base class for the SPARQL-based validators and other possible implementations.> rdfs:Resource <><> .
+<The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> <http://www.w3.org/2002/07/owl#Ontology> <SPARQL ASK executable> .
+<The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of SPARQL executables that are based on an ASK query.> .
+<The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> <A shape is a collection of constraints that may be targeted for certain nodes.> sh:SPARQLExecutable .
+<The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> rdfs:Resource <><> .
+sh:SPARQLAskExecutable <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:SPARQLAskExecutable <http://www.w3.org/2002/07/owl#Ontology> sh:SPARQLSelectValidator .
+sh:SPARQLAskExecutable <W3C Shapes Constraint Language (SHACL) Vocabulary> <SPARQL SELECT validator> .
+sh:SPARQLAskExecutable <A shape is a collection of constraints that may be targeted for certain nodes.> <The validator(s) used to evaluate constraints of either node or property shapes.> .
+sh:SPARQLAskExecutable <A shape is a collection of constraints that may be targeted for certain nodes.> <The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> .
+sh:SPARQLAskExecutable rdfs:Resource <><> .
+<The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> <http://www.w3.org/ns/shacl#> sh:Shape .
+<The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> <http://www.w3.org/2002/07/owl#Ontology> <SPARQL SELECT executable> .
+<The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of SPARQL executables based on a SELECT query.> .
+<The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> <A shape is a collection of constraints that may be targeted for certain nodes.> sh:SPARQLExecutable .
+<The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> rdfs:Resource <><> .
+sh:SPARQLSelectExecutable <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:SPARQLSelectExecutable <http://www.w3.org/2002/07/owl#Ontology> sh:AndConstraintComponent .
+sh:SPARQLSelectExecutable <W3C Shapes Constraint Language (SHACL) Vocabulary> <And constraint component> .
+sh:SPARQLSelectExecutable rdfs:Resource <><> .
+sh:SPARQLSelectExecutable <Superclass of components that can take parameters, especially functions and constraint components.> <A constraint component that can be used to test whether a value node conforms to all members of a provided list of shapes.> .
+<A constraint component that can be used to test whether a value node conforms to all members of a provided list of shapes.> <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+<A constraint component that can be used to test whether a value node conforms to all members of a provided list of shapes.> rdfs:Resource <><> .
+<A constraint component that can be used to test whether a value node conforms to all members of a provided list of shapes.> <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:AndConstraintComponent-and .
+sh:AndConstraintComponent-and <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:AndConstraintComponent-and <http://www.w3.org/2002/07/owl#Ontology> sh:and .
+sh:AndConstraintComponent-and <W3C Shapes Constraint Language (SHACL) Vocabulary> <and> .
+sh:AndConstraintComponent-and rdfs:Resource <><> .
+sh:AndConstraintComponent-and <If set to true then all nodes conform to this.> <The (single) value of this property must be a list of path elements, representing the elements of alternative paths.> .
+<RDF list of shapes to validate the value nodes against.> <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+<RDF list of shapes to validate the value nodes against.> <http://www.w3.org/2002/07/owl#Ontology> sh:ClassConstraintComponent .
+<RDF list of shapes to validate the value nodes against.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Class constraint component> .
+<RDF list of shapes to validate the value nodes against.> rdfs:Resource <><> .
+<RDF list of shapes to validate the value nodes against.> <Superclass of components that can take parameters, especially functions and constraint components.> <A constraint component that can be used to verify that each value node is an instance of a given type.> .
+<A constraint component that can be used to verify that each value node is an instance of a given type.> <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+<A constraint component that can be used to verify that each value node is an instance of a given type.> rdfs:Resource <><> .
+<A constraint component that can be used to verify that each value node is an instance of a given type.> <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:ClassConstraintComponent-class .
+<A constraint component that can be used to verify that each value node is an instance of a given type.> sh:class <The node kind of all blank nodes or literals.> .
+sh:ClassConstraintComponent-class <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:ClassConstraintComponent-class <http://www.w3.org/2002/07/owl#Ontology> sh:nodeKind .
+sh:ClassConstraintComponent-class <W3C Shapes Constraint Language (SHACL) Vocabulary> <class> .
+sh:ClassConstraintComponent-class rdfs:Resource <><> .
+sh:ClassConstraintComponent-class <If set to true then all nodes conform to this.> sh:Shape .
+sh:class <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:class <http://www.w3.org/2002/07/owl#Ontology> <node kind> .
+sh:class <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the node kind (e.g. IRI or literal) each value node.> .
+sh:class rdfs:Resource <><> .
+sh:class <If set to true then all nodes conform to this.> sh:Severity .
+<The type that all value nodes must have.> <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+<The type that all value nodes must have.> <http://www.w3.org/2002/07/owl#Ontology> sh:ClosedConstraintComponent .
+<The type that all value nodes must have.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Closed constraint component> .
+<The type that all value nodes must have.> rdfs:Resource <><> .
+<The type that all value nodes must have.> <Superclass of components that can take parameters, especially functions and constraint components.> <A constraint component that can be used to indicate that focus nodes must only have values for those properties that have been explicitly enumerated via sh:property/sh:path.> .
+<The type that all value nodes must have.> <Superclass of components that can take parameters, especially functions and constraint components.> sh:ClosedConstraintComponent-closed .
+<A constraint component that can be used to indicate that focus nodes must only have values for those properties that have been explicitly enumerated via sh:property/sh:path.> <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+<A constraint component that can be used to indicate that focus nodes must only have values for those properties that have been explicitly enumerated via sh:property/sh:path.> rdfs:Resource <><> .
+<A constraint component that can be used to indicate that focus nodes must only have values for those properties that have been explicitly enumerated via sh:property/sh:path.> <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:ClosedConstraintComponent-ignoredProperties .
+<A constraint component that can be used to indicate that focus nodes must only have values for those properties that have been explicitly enumerated via sh:property/sh:path.> sh:closed rdfs:range .
+sh:ClosedConstraintComponent-closed <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:ClosedConstraintComponent-closed rdfs:Resource <><> .
+sh:ClosedConstraintComponent-closed <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:datatype .
+sh:ClosedConstraintComponent-closed <The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> sh:ignoredProperties .
+sh:ClosedConstraintComponent-ignoredProperties <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:ClosedConstraintComponent-ignoredProperties <http://www.w3.org/2002/07/owl#Ontology> <true> .
+sh:ClosedConstraintComponent-ignoredProperties <W3C Shapes Constraint Language (SHACL) Vocabulary> <closed> .
+sh:ClosedConstraintComponent-ignoredProperties rdfs:Resource <><> .
+sh:ClosedConstraintComponent-ignoredProperties <If set to true then all nodes conform to this.> rdfs:range .
+sh:closed <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:closed <http://www.w3.org/2002/07/owl#Ontology> <datatype> .
+sh:closed <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies an RDF datatype that all value nodes must have.> .
+sh:closed rdfs:Resource <><> .
+sh:closed <If set to true then all nodes conform to this.> rdfs:Datatype .
+sh:datatype <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:datatype <http://www.w3.org/2002/07/owl#Ontology> <If set to true then the shape is closed.> .
+sh:datatype <W3C Shapes Constraint Language (SHACL) Vocabulary> <ignored properties> .
+sh:datatype rdfs:Resource <><> .
+sh:datatype <If set to true then all nodes conform to this.> <The (single) value of this property must be a list of path elements, representing the elements of alternative paths.> .
+<An optional RDF list of properties that are also permitted in addition to those explicitly enumerated via sh:property/sh:path.> <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+<An optional RDF list of properties that are also permitted in addition to those explicitly enumerated via sh:property/sh:path.> <http://www.w3.org/2002/07/owl#Ontology> sh:DatatypeConstraintComponent .
+<An optional RDF list of properties that are also permitted in addition to those explicitly enumerated via sh:property/sh:path.> <W3C Shapes Constraint Language (SHACL) Vocabulary> <Datatype constraint component> .
+<An optional RDF list of properties that are also permitted in addition to those explicitly enumerated via sh:property/sh:path.> rdfs:Resource <><> .
+<An optional RDF list of properties that are also permitted in addition to those explicitly enumerated via sh:property/sh:path.> <Superclass of components that can take parameters, especially functions and constraint components.> <A constraint component that can be used to restrict the datatype of all value nodes.> .
+<A constraint component that can be used to restrict the datatype of all value nodes.> <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+<A constraint component that can be used to restrict the datatype of all value nodes.> rdfs:Resource <><> .
+<A constraint component that can be used to restrict the datatype of all value nodes.> <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:closed .
+<A constraint component that can be used to restrict the datatype of all value nodes.> sh:class <The node kind of all blank nodes or literals.> .
+<A constraint component that can be used to restrict the datatype of all value nodes.> sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:DatatypeConstraintComponent-datatype <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:DatatypeConstraintComponent-datatype <http://www.w3.org/2002/07/owl#Ontology> <max count> .
+sh:DatatypeConstraintComponent-datatype <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the maximum number of values in the set of value nodes.> .
+sh:DatatypeConstraintComponent-datatype rdfs:Resource <><> .
+sh:DatatypeConstraintComponent-datatype <If set to true then all nodes conform to this.> xsd:integer .
+sh:DisjointConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:DisjointConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Disjoint constraint component> .
+sh:DisjointConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that the set of value nodes is disjoint with the the set of nodes that have the focus node as subject and the value of a given property as predicate.> .
+sh:DisjointConstraintComponent rdfs:Resource <><> .
+sh:DisjointConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:DisjointConstraintComponent-disjoint .
+sh:DisjointConstraintComponent-disjoint <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:DisjointConstraintComponent-disjoint rdfs:Resource <><> .
+sh:DisjointConstraintComponent-disjoint <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:disjoint .
+sh:DisjointConstraintComponent-disjoint sh:class <The node kind of all blank nodes or literals.> .
+sh:disjoint <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:disjoint <http://www.w3.org/2002/07/owl#Ontology> <disjoint> .
+sh:disjoint <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a property where the set of values must be disjoint with the value nodes.> .
+sh:disjoint rdfs:Resource <><> .
+sh:disjoint <If set to true then all nodes conform to this.> sh:deactivated .
+sh:EqualsConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:EqualsConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Equals constraint component> .
+sh:EqualsConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that the set of value nodes is equal to the set of nodes that have the focus node as subject and the value of a given property as predicate.> .
+sh:EqualsConstraintComponent rdfs:Resource <><> .
+sh:EqualsConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:EqualsConstraintComponent-equals .
+sh:EqualsConstraintComponent-equals <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:EqualsConstraintComponent-equals rdfs:Resource <><> .
+sh:EqualsConstraintComponent-equals <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:equals .
+sh:EqualsConstraintComponent-equals sh:class <The node kind of all blank nodes or literals.> .
+sh:equals <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:equals <http://www.w3.org/2002/07/owl#Ontology> <equals> .
+sh:equals <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a property that must have the same values as the value nodes.> .
+sh:equals rdfs:Resource <><> .
+sh:equals <If set to true then all nodes conform to this.> sh:deactivated .
+sh:HasValueConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:HasValueConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Has-value constraint component> .
+sh:HasValueConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that one of the value nodes is a given RDF node.> .
+sh:HasValueConstraintComponent rdfs:Resource <><> .
+sh:HasValueConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:HasValueConstraintComponent-hasValue .
+sh:HasValueConstraintComponent-hasValue <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:HasValueConstraintComponent-hasValue rdfs:Resource <><> .
+sh:HasValueConstraintComponent-hasValue <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:hasValue .
+sh:hasValue <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:hasValue <http://www.w3.org/2002/07/owl#Ontology> <has value> .
+sh:hasValue <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a value that must be among the value nodes.> .
+sh:hasValue rdfs:Resource <><> .
+sh:InConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:InConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <In constraint component> .
+sh:InConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to exclusively enumerate the permitted value nodes.> .
+sh:InConstraintComponent rdfs:Resource <><> .
+sh:InConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:InConstraintComponent-in .
+sh:InConstraintComponent-in <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:InConstraintComponent-in rdfs:Resource <><> .
+sh:InConstraintComponent-in <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:in .
+sh:InConstraintComponent-in sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:in <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:in <http://www.w3.org/2002/07/owl#Ontology> <in> .
+sh:in <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a list of allowed values so that each value node must be among the members of the given list.> .
+sh:in rdfs:Resource <><> .
+sh:in <If set to true then all nodes conform to this.> <The (single) value of this property must be a list of path elements, representing the elements of alternative paths.> .
+sh:LanguageInConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:LanguageInConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Language-in constraint component> .
+sh:LanguageInConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to enumerate language tags that all value nodes must have.> .
+sh:LanguageInConstraintComponent rdfs:Resource <><> .
+sh:LanguageInConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:LanguageInConstraintComponent-languageIn .
+sh:LanguageInConstraintComponent-languageIn <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:LanguageInConstraintComponent-languageIn rdfs:Resource <><> .
+sh:LanguageInConstraintComponent-languageIn <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:languageIn .
+sh:LanguageInConstraintComponent-languageIn sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:languageIn <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:languageIn <http://www.w3.org/2002/07/owl#Ontology> <language in> .
+sh:languageIn <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a list of language tags that all value nodes must have.> .
+sh:languageIn rdfs:Resource <><> .
+sh:languageIn <If set to true then all nodes conform to this.> <The (single) value of this property must be a list of path elements, representing the elements of alternative paths.> .
+sh:LessThanConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:LessThanConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Less-than constraint component> .
+sh:LessThanConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that each value node is smaller than all the nodes that have the focus node as subject and the value of a given property as predicate.> .
+sh:LessThanConstraintComponent rdfs:Resource <><> .
+sh:LessThanConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:LessThanConstraintComponent-lessThan .
+sh:LessThanConstraintComponent-lessThan <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:LessThanConstraintComponent-lessThan rdfs:Resource <><> .
+sh:LessThanConstraintComponent-lessThan <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:lessThan .
+sh:LessThanConstraintComponent-lessThan sh:class <The node kind of all blank nodes or literals.> .
+sh:lessThan <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:lessThan <http://www.w3.org/2002/07/owl#Ontology> <less than> .
+sh:lessThan <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a property that must have smaller values than the value nodes.> .
+sh:lessThan rdfs:Resource <><> .
+sh:lessThan <If set to true then all nodes conform to this.> sh:deactivated .
+sh:LessThanOrEqualsConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:LessThanOrEqualsConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <less-than-or-equals constraint component> .
+sh:LessThanOrEqualsConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that every value node is smaller than all the nodes that have the focus node as subject and the value of a given property as predicate.> .
+sh:LessThanOrEqualsConstraintComponent rdfs:Resource <><> .
+sh:LessThanOrEqualsConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:LessThanOrEqualsConstraintComponent-lessThanOrEquals .
+sh:LessThanOrEqualsConstraintComponent-lessThanOrEquals <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:LessThanOrEqualsConstraintComponent-lessThanOrEquals rdfs:Resource <><> .
+sh:LessThanOrEqualsConstraintComponent-lessThanOrEquals <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:lessThanOrEquals .
+sh:LessThanOrEqualsConstraintComponent-lessThanOrEquals sh:class <The node kind of all blank nodes or literals.> .
+sh:lessThanOrEquals <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:lessThanOrEquals <http://www.w3.org/2002/07/owl#Ontology> <less than or equals> .
+sh:lessThanOrEquals <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a property that must have smaller or equal values than the value nodes.> .
+sh:lessThanOrEquals rdfs:Resource <><> .
+sh:lessThanOrEquals <If set to true then all nodes conform to this.> sh:deactivated .
+sh:MaxCountConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:MaxCountConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Max-count constraint component> .
+sh:MaxCountConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the maximum number of value nodes.> .
+sh:MaxCountConstraintComponent rdfs:Resource <><> .
+sh:MaxCountConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:MaxCountConstraintComponent-maxCount .
+sh:MaxCountConstraintComponent-maxCount <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:MaxCountConstraintComponent-maxCount rdfs:Resource <><> .
+sh:MaxCountConstraintComponent-maxCount <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:DatatypeConstraintComponent-datatype .
+sh:MaxCountConstraintComponent-maxCount sh:closed xsd:integer .
+sh:MaxCountConstraintComponent-maxCount sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:MaxExclusiveConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:MaxExclusiveConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Max-exclusive constraint component> .
+sh:MaxExclusiveConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the range of value nodes with a maximum exclusive value.> .
+sh:MaxExclusiveConstraintComponent rdfs:Resource <><> .
+sh:MaxExclusiveConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:MaxExclusiveConstraintComponent-maxExclusive .
+sh:MaxExclusiveConstraintComponent-maxExclusive <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:MaxExclusiveConstraintComponent-maxExclusive rdfs:Resource <><> .
+sh:MaxExclusiveConstraintComponent-maxExclusive <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:maxExclusive .
+sh:MaxExclusiveConstraintComponent-maxExclusive sh:class <The node kind of all IRIs or literals.> .
+sh:MaxExclusiveConstraintComponent-maxExclusive sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:maxExclusive <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:maxExclusive <http://www.w3.org/2002/07/owl#Ontology> <max exclusive> .
+sh:maxExclusive <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the maximum exclusive value of each value node.> .
+sh:maxExclusive rdfs:Resource <><> .
+sh:MaxInclusiveConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:MaxInclusiveConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Max-inclusive constraint component> .
+sh:MaxInclusiveConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the range of value nodes with a maximum inclusive value.> .
+sh:MaxInclusiveConstraintComponent rdfs:Resource <><> .
+sh:MaxInclusiveConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:MaxInclusiveConstraintComponent-maxInclusive .
+sh:MaxInclusiveConstraintComponent-maxInclusive <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:MaxInclusiveConstraintComponent-maxInclusive rdfs:Resource <><> .
+sh:MaxInclusiveConstraintComponent-maxInclusive <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:maxInclusive .
+sh:MaxInclusiveConstraintComponent-maxInclusive sh:class <The node kind of all IRIs or literals.> .
+sh:MaxInclusiveConstraintComponent-maxInclusive sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:maxInclusive <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:maxInclusive <http://www.w3.org/2002/07/owl#Ontology> <max inclusive> .
+sh:maxInclusive <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the maximum inclusive value of each value node.> .
+sh:maxInclusive rdfs:Resource <><> .
+sh:MaxLengthConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:MaxLengthConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Max-length constraint component> .
+sh:MaxLengthConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the maximum string length of value nodes.> .
+sh:MaxLengthConstraintComponent rdfs:Resource <><> .
+sh:MaxLengthConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:MaxLengthConstraintComponent-maxLength .
+sh:MaxLengthConstraintComponent-maxLength <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:MaxLengthConstraintComponent-maxLength rdfs:Resource <><> .
+sh:MaxLengthConstraintComponent-maxLength <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:maxLength .
+sh:MaxLengthConstraintComponent-maxLength sh:closed xsd:integer .
+sh:MaxLengthConstraintComponent-maxLength sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:maxLength <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:maxLength <http://www.w3.org/2002/07/owl#Ontology> <max length> .
+sh:maxLength <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the maximum string length of each value node.> .
+sh:maxLength rdfs:Resource <><> .
+sh:maxLength <If set to true then all nodes conform to this.> xsd:integer .
+sh:MinCountConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:MinCountConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Min-count constraint component> .
+sh:MinCountConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the minimum number of value nodes.> .
+sh:MinCountConstraintComponent rdfs:Resource <><> .
+sh:MinCountConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:MinCountConstraintComponent-minCount .
+sh:MinCountConstraintComponent-minCount <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:MinCountConstraintComponent-minCount rdfs:Resource <><> .
+sh:MinCountConstraintComponent-minCount <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:minCount .
+sh:MinCountConstraintComponent-minCount sh:closed xsd:integer .
+sh:MinCountConstraintComponent-minCount sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:minCount <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:minCount <http://www.w3.org/2002/07/owl#Ontology> <min count> .
+sh:minCount <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the minimum number of values in the set of value nodes.> .
+sh:minCount rdfs:Resource <><> .
+sh:minCount <If set to true then all nodes conform to this.> xsd:integer .
+sh:MinExclusiveConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:MinExclusiveConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Min-exclusive constraint component> .
+sh:MinExclusiveConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the range of value nodes with a minimum exclusive value.> .
+sh:MinExclusiveConstraintComponent rdfs:Resource <><> .
+sh:MinExclusiveConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:MinExclusiveConstraintComponent-minExclusive .
+sh:MinExclusiveConstraintComponent-minExclusive <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:MinExclusiveConstraintComponent-minExclusive rdfs:Resource <><> .
+sh:MinExclusiveConstraintComponent-minExclusive <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:minExclusive .
+sh:MinExclusiveConstraintComponent-minExclusive sh:class <The node kind of all IRIs or literals.> .
+sh:MinExclusiveConstraintComponent-minExclusive sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:minExclusive <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:minExclusive <http://www.w3.org/2002/07/owl#Ontology> <min exclusive> .
+sh:minExclusive <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the minimum exclusive value of each value node.> .
+sh:minExclusive rdfs:Resource <><> .
+sh:MinInclusiveConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:MinInclusiveConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Min-inclusive constraint component> .
+sh:MinInclusiveConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the range of value nodes with a minimum inclusive value.> .
+sh:MinInclusiveConstraintComponent rdfs:Resource <><> .
+sh:MinInclusiveConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:MinInclusiveConstraintComponent-minInclusive .
+sh:MinInclusiveConstraintComponent-minInclusive <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:MinInclusiveConstraintComponent-minInclusive rdfs:Resource <><> .
+sh:MinInclusiveConstraintComponent-minInclusive <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:minInclusive .
+sh:MinInclusiveConstraintComponent-minInclusive sh:class <The node kind of all IRIs or literals.> .
+sh:MinInclusiveConstraintComponent-minInclusive sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:minInclusive <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:minInclusive <http://www.w3.org/2002/07/owl#Ontology> <min inclusive> .
+sh:minInclusive <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the minimum inclusive value of each value node.> .
+sh:minInclusive rdfs:Resource <><> .
+sh:MinLengthConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:MinLengthConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Min-length constraint component> .
+sh:MinLengthConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the minimum string length of value nodes.> .
+sh:MinLengthConstraintComponent rdfs:Resource <><> .
+sh:MinLengthConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:MinLengthConstraintComponent-minLength .
+sh:MinLengthConstraintComponent-minLength <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:MinLengthConstraintComponent-minLength rdfs:Resource <><> .
+sh:MinLengthConstraintComponent-minLength <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:minLength .
+sh:MinLengthConstraintComponent-minLength sh:closed xsd:integer .
+sh:MinLengthConstraintComponent-minLength sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:minLength <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:minLength <http://www.w3.org/2002/07/owl#Ontology> <min length> .
+sh:minLength <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the minimum string length of each value node.> .
+sh:minLength rdfs:Resource <><> .
+sh:minLength <If set to true then all nodes conform to this.> xsd:integer .
+sh:NodeConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:NodeConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Node constraint component> .
+sh:NodeConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that all value nodes conform to the given node shape.> .
+sh:NodeConstraintComponent rdfs:Resource <><> .
+sh:NodeConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:NodeConstraintComponent-node .
+sh:NodeConstraintComponent-node <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:NodeConstraintComponent-node rdfs:Resource <><> .
+sh:NodeConstraintComponent-node <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:node .
+sh:node <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:node <http://www.w3.org/2002/07/owl#Ontology> <node> .
+sh:node <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the node shape that all value nodes must conform to.> .
+sh:node rdfs:Resource <><> .
+sh:node <If set to true then all nodes conform to this.> rdfs:isDefinedBy .
+sh:NodeKindConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:NodeKindConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Node-kind constraint component> .
+sh:NodeKindConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the RDF node kind of each value node.> .
+sh:NodeKindConstraintComponent rdfs:Resource <><> .
+sh:NodeKindConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:NodeKindConstraintComponent-nodeKind .
+sh:NodeKindConstraintComponent-nodeKind <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:NodeKindConstraintComponent-nodeKind rdfs:Resource <><> .
+sh:NodeKindConstraintComponent-nodeKind <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:class .
+sh:NodeKindConstraintComponent-nodeKind sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:NodeKindConstraintComponent-nodeKind sh:in <n3-1> .
+<n3-1> rdf:first <The class of all node kinds, including sh:BlankNode, sh:IRI, sh:Literal or the combinations of these: sh:BlankNodeOrIRI, sh:BlankNodeOrLiteral, sh:IRIOrLiteral.> .
+<n3-1> rdf:rest <n3-2> .
+<n3-2> rdf:first <The node kind of all blank nodes or literals.> .
+<n3-2> rdf:rest <n3-3> .
+<n3-3> rdf:first <The node kind of all IRIs or literals.> .
+<n3-3> rdf:rest <n3-4> .
+<n3-4> rdf:first <The node kind of all blank nodes.> .
+<n3-4> rdf:rest <n3-5> .
+<n3-5> rdf:first <The node kind of all blank nodes or IRIs.> .
+<n3-5> rdf:rest <n3-6> .
+<n3-6> rdf:first <The node kind of all IRIs.> .
+<n3-6> rdf:rest rdf:nil .
+sh:NotConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:NotConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Not constraint component> .
+sh:NotConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that value nodes do not conform to a given shape.> .
+sh:NotConstraintComponent rdfs:Resource <><> .
+sh:NotConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:NotConstraintComponent-not .
+sh:NotConstraintComponent-not <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:NotConstraintComponent-not rdfs:Resource <><> .
+sh:NotConstraintComponent-not <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:not .
+sh:not <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:not <http://www.w3.org/2002/07/owl#Ontology> <not> .
+sh:not <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a shape that the value nodes must not conform to.> .
+sh:not rdfs:Resource <><> .
+sh:not <If set to true then all nodes conform to this.> <http://www.w3.org/ns/shacl-shacl#> .
+sh:OrConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:OrConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Or constraint component> .
+sh:OrConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the value nodes so that they conform to at least one out of several provided shapes.> .
+sh:OrConstraintComponent rdfs:Resource <><> .
+sh:OrConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:OrConstraintComponent-or .
+sh:OrConstraintComponent-or <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:OrConstraintComponent-or rdfs:Resource <><> .
+sh:OrConstraintComponent-or <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:or .
+sh:or <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:or <http://www.w3.org/2002/07/owl#Ontology> <or> .
+sh:or <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a list of shapes so that the value nodes must conform to at least one of the shapes.> .
+sh:or rdfs:Resource <><> .
+sh:or <If set to true then all nodes conform to this.> <The (single) value of this property must be a list of path elements, representing the elements of alternative paths.> .
+sh:PatternConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:PatternConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Pattern constraint component> .
+sh:PatternConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that every value node matches a given regular expression.> .
+sh:PatternConstraintComponent rdfs:Resource <><> .
+sh:PatternConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:PatternConstraintComponent-pattern .
+sh:PatternConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:PatternConstraintComponent-flags .
+sh:PatternConstraintComponent-pattern <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:PatternConstraintComponent-pattern rdfs:Resource <><> .
+sh:PatternConstraintComponent-pattern <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:pattern .
+sh:PatternConstraintComponent-pattern sh:closed xsd:string .
+sh:PatternConstraintComponent-flags <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:PatternConstraintComponent-flags rdfs:Resource <><> .
+sh:PatternConstraintComponent-flags <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:flags .
+sh:PatternConstraintComponent-flags <The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> sh:ignoredProperties .
+sh:PatternConstraintComponent-flags sh:closed xsd:string .
+sh:pattern <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:pattern <http://www.w3.org/2002/07/owl#Ontology> <pattern> .
+sh:pattern <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a regular expression pattern that the string representations of the value nodes must match.> .
+sh:pattern rdfs:Resource <><> .
+sh:pattern <If set to true then all nodes conform to this.> xsd:string .
+sh:flags <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:flags <http://www.w3.org/2002/07/owl#Ontology> <flags> .
+sh:flags <W3C Shapes Constraint Language (SHACL) Vocabulary> <An optional flag to be used with regular expression pattern matching.> .
+sh:flags rdfs:Resource <><> .
+sh:flags <If set to true then all nodes conform to this.> xsd:string .
+sh:PropertyConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:PropertyConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Property constraint component> .
+sh:PropertyConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that all value nodes conform to the given property shape.> .
+sh:PropertyConstraintComponent rdfs:Resource <><> .
+sh:PropertyConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:PropertyConstraintComponent-property .
+sh:PropertyConstraintComponent-property <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:PropertyConstraintComponent-property rdfs:Resource <><> .
+sh:PropertyConstraintComponent-property <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:property .
+sh:property <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:property <http://www.w3.org/2002/07/owl#Ontology> <property> .
+sh:property <W3C Shapes Constraint Language (SHACL) Vocabulary> <Links a shape to its property shapes.> .
+sh:property rdfs:Resource <><> .
+sh:property <If set to true then all nodes conform to this.> <A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> .
+sh:property <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <http://www.w3.org/ns/shacl-shacl#> .
+sh:QualifiedMaxCountConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:QualifiedMaxCountConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Qualified-max-count constraint component> .
+sh:QualifiedMaxCountConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that a specified maximum number of value nodes conforms to a given shape.> .
+sh:QualifiedMaxCountConstraintComponent rdfs:Resource <><> .
+sh:QualifiedMaxCountConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:QualifiedMaxCountConstraintComponent-qualifiedMaxCount .
+sh:QualifiedMaxCountConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:QualifiedMaxCountConstraintComponent-qualifiedValueShape .
+sh:QualifiedMaxCountConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint .
+sh:QualifiedMaxCountConstraintComponent-qualifiedMaxCount <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:QualifiedMaxCountConstraintComponent-qualifiedMaxCount rdfs:Resource <><> .
+sh:QualifiedMaxCountConstraintComponent-qualifiedMaxCount <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:qualifiedMaxCount .
+sh:QualifiedMaxCountConstraintComponent-qualifiedMaxCount sh:closed xsd:integer .
+sh:QualifiedMaxCountConstraintComponent-qualifiedValueShape <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:QualifiedMaxCountConstraintComponent-qualifiedValueShape rdfs:Resource <><> .
+sh:QualifiedMaxCountConstraintComponent-qualifiedValueShape <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:qualifiedValueShape .
+sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint rdfs:Resource <><> .
+sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:qualifiedValueShapesDisjoint .
+sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint <The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> sh:ignoredProperties .
+sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint sh:closed rdfs:range .
+sh:qualifiedMaxCount <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:qualifiedMaxCount <http://www.w3.org/2002/07/owl#Ontology> <qualified max count> .
+sh:qualifiedMaxCount <W3C Shapes Constraint Language (SHACL) Vocabulary> <The maximum number of value nodes that can conform to the shape.> .
+sh:qualifiedMaxCount rdfs:Resource <><> .
+sh:qualifiedMaxCount <If set to true then all nodes conform to this.> xsd:integer .
+sh:qualifiedValueShape <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:qualifiedValueShape <http://www.w3.org/2002/07/owl#Ontology> <qualified value shape> .
+sh:qualifiedValueShape <W3C Shapes Constraint Language (SHACL) Vocabulary> <The shape that a specified number of values must conform to.> .
+sh:qualifiedValueShape rdfs:Resource <><> .
+sh:qualifiedValueShape <If set to true then all nodes conform to this.> <http://www.w3.org/ns/shacl-shacl#> .
+sh:qualifiedValueShapesDisjoint <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:qualifiedValueShapesDisjoint <http://www.w3.org/2002/07/owl#Ontology> <qualified value shapes disjoint> .
+sh:qualifiedValueShapesDisjoint <W3C Shapes Constraint Language (SHACL) Vocabulary> <Can be used to mark the qualified value shape to be disjoint with its sibling shapes.> .
+sh:qualifiedValueShapesDisjoint rdfs:Resource <><> .
+sh:qualifiedValueShapesDisjoint <If set to true then all nodes conform to this.> rdfs:range .
+sh:QualifiedMinCountConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:QualifiedMinCountConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Qualified-min-count constraint component> .
+sh:QualifiedMinCountConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that a specified minimum number of value nodes conforms to a given shape.> .
+sh:QualifiedMinCountConstraintComponent rdfs:Resource <><> .
+sh:QualifiedMinCountConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:QualifiedMinCountConstraintComponent-qualifiedMinCount .
+sh:QualifiedMinCountConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:QualifiedMinCountConstraintComponent-qualifiedValueShape .
+sh:QualifiedMinCountConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint .
+sh:QualifiedMinCountConstraintComponent-qualifiedMinCount <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:QualifiedMinCountConstraintComponent-qualifiedMinCount rdfs:Resource <><> .
+sh:QualifiedMinCountConstraintComponent-qualifiedMinCount <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:qualifiedMinCount .
+sh:QualifiedMinCountConstraintComponent-qualifiedMinCount sh:closed xsd:integer .
+sh:QualifiedMinCountConstraintComponent-qualifiedValueShape <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:QualifiedMinCountConstraintComponent-qualifiedValueShape rdfs:Resource <><> .
+sh:QualifiedMinCountConstraintComponent-qualifiedValueShape <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:qualifiedValueShape .
+sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint rdfs:Resource <><> .
+sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:qualifiedValueShapesDisjoint .
+sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint <The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.> sh:ignoredProperties .
+sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint sh:closed rdfs:range .
+sh:qualifiedMinCount <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:qualifiedMinCount <http://www.w3.org/2002/07/owl#Ontology> <qualified min count> .
+sh:qualifiedMinCount <W3C Shapes Constraint Language (SHACL) Vocabulary> <The minimum number of value nodes that must conform to the shape.> .
+sh:qualifiedMinCount rdfs:Resource <><> .
+sh:qualifiedMinCount <If set to true then all nodes conform to this.> xsd:integer .
+sh:UniqueLangConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:UniqueLangConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Unique-languages constraint component> .
+sh:UniqueLangConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to specify that no pair of value nodes may use the same language tag.> .
+sh:UniqueLangConstraintComponent rdfs:Resource <><> .
+sh:UniqueLangConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:UniqueLangConstraintComponent-uniqueLang .
+sh:UniqueLangConstraintComponent-uniqueLang <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:UniqueLangConstraintComponent-uniqueLang rdfs:Resource <><> .
+sh:UniqueLangConstraintComponent-uniqueLang <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:uniqueLang .
+sh:UniqueLangConstraintComponent-uniqueLang sh:closed rdfs:range .
+sh:UniqueLangConstraintComponent-uniqueLang sh:DatatypeConstraintComponent-datatype sh:maxCount .
+sh:uniqueLang <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:uniqueLang <http://www.w3.org/2002/07/owl#Ontology> <unique languages> .
+sh:uniqueLang <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies whether all node values must have a unique (or no) language tag.> .
+sh:uniqueLang rdfs:Resource <><> .
+sh:uniqueLang <If set to true then all nodes conform to this.> rdfs:range .
+sh:XoneConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:XoneConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Exactly one constraint component> .
+sh:XoneConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to restrict the value nodes so that they conform to exactly one out of several provided shapes.> .
+sh:XoneConstraintComponent rdfs:Resource <><> .
+sh:XoneConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:XoneConstraintComponent-xone .
+sh:XoneConstraintComponent-xone <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:XoneConstraintComponent-xone rdfs:Resource <><> .
+sh:XoneConstraintComponent-xone <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:xone .
+sh:xone <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:xone <http://www.w3.org/2002/07/owl#Ontology> <exactly one> .
+sh:xone <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies a list of shapes so that the value nodes must conform to exactly one of the shapes.> .
+sh:xone rdfs:Resource <><> .
+sh:xone <If set to true then all nodes conform to this.> <The (single) value of this property must be a list of path elements, representing the elements of alternative paths.> .
+sh:SPARQLExecutable <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:SPARQLExecutable <http://www.w3.org/2002/07/owl#Ontology> <SPARQL executable> .
+sh:SPARQLExecutable <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of resources that encapsulate a SPARQL query.> .
+sh:SPARQLExecutable <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+sh:SPARQLExecutable rdfs:Resource <><> .
+sh:ask <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:ask <http://www.w3.org/2002/07/owl#Ontology> <ask> .
+sh:ask <W3C Shapes Constraint Language (SHACL) Vocabulary> <The SPARQL ASK query to execute.> .
+sh:ask rdfs:Resource <><> .
+sh:ask <If set to true then all nodes conform to this.> xsd:string .
+sh:ask <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> .
+sh:SPARQLConstructExecutable <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:SPARQLConstructExecutable <http://www.w3.org/2002/07/owl#Ontology> <SPARQL CONSTRUCT executable> .
+sh:SPARQLConstructExecutable <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of SPARQL executables that are based on a CONSTRUCT query.> .
+sh:SPARQLConstructExecutable <A shape is a collection of constraints that may be targeted for certain nodes.> sh:SPARQLExecutable .
+sh:SPARQLConstructExecutable rdfs:Resource <><> .
+sh:construct <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:construct <http://www.w3.org/2002/07/owl#Ontology> <construct> .
+sh:construct <W3C Shapes Constraint Language (SHACL) Vocabulary> <The SPARQL CONSTRUCT query to execute.> .
+sh:construct rdfs:Resource <><> .
+sh:construct <If set to true then all nodes conform to this.> xsd:string .
+sh:construct <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:SPARQLConstructExecutable .
+sh:select <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:select <http://www.w3.org/2002/07/owl#Ontology> <select> .
+sh:select <W3C Shapes Constraint Language (SHACL) Vocabulary> <The SPARQL SELECT query to execute.> .
+sh:select rdfs:Resource <><> .
+sh:select <If set to true then all nodes conform to this.> xsd:string .
+sh:select <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> .
+sh:SPARQLUpdateExecutable <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:SPARQLUpdateExecutable <http://www.w3.org/2002/07/owl#Ontology> <SPARQL UPDATE executable> .
+sh:SPARQLUpdateExecutable <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of SPARQL executables based on a SPARQL UPDATE.> .
+sh:SPARQLUpdateExecutable <A shape is a collection of constraints that may be targeted for certain nodes.> sh:SPARQLExecutable .
+sh:SPARQLUpdateExecutable rdfs:Resource <><> .
+sh:update <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:update <http://www.w3.org/2002/07/owl#Ontology> <update> .
+sh:update <W3C Shapes Constraint Language (SHACL) Vocabulary> <The SPARQL UPDATE to execute.> .
+sh:update rdfs:Resource <><> .
+sh:update <If set to true then all nodes conform to this.> xsd:string .
+sh:update <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:SPARQLUpdateExecutable .
+sh:prefixes <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:prefixes <http://www.w3.org/2002/07/owl#Ontology> <prefixes> .
+sh:prefixes <W3C Shapes Constraint Language (SHACL) Vocabulary> <The prefixes that shall be applied before parsing the associated SPARQL query.> .
+sh:prefixes rdfs:Resource <><> .
+sh:prefixes <If set to true then all nodes conform to this.> rdf:type .
+sh:prefixes <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:SPARQLExecutable .
+sh:PrefixDeclaration <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:PrefixDeclaration <http://www.w3.org/2002/07/owl#Ontology> <Prefix declaration> .
+sh:PrefixDeclaration <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of prefix declarations, consisting of pairs of a prefix with a namespace.> .
+sh:PrefixDeclaration <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+sh:PrefixDeclaration rdfs:Resource <><> .
+sh:SPARQLConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:SPARQLConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <SPARQL constraint component> .
+sh:SPARQLConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to define constraints based on SPARQL queries.> .
+sh:SPARQLConstraintComponent rdfs:Resource <><> .
+sh:SPARQLConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:SPARQLConstraintComponent-sparql .
+sh:SPARQLConstraintComponent-sparql <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:SPARQLConstraintComponent-sparql rdfs:Resource <><> .
+sh:SPARQLConstraintComponent-sparql <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:sparql .
+sh:sparql <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:sparql <http://www.w3.org/2002/07/owl#Ontology> <constraint (in SPARQL)> .
+sh:sparql <W3C Shapes Constraint Language (SHACL) Vocabulary> <Links a shape with SPARQL constraints.> .
+sh:sparql rdfs:Resource <><> .
+sh:sparql <If set to true then all nodes conform to this.> sh:SPARQLConstraint .
+sh:sparql <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <http://www.w3.org/ns/shacl-shacl#> .
+sh:SPARQLConstraint <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:SPARQLConstraint <http://www.w3.org/2002/07/owl#Ontology> <SPARQL constraint> .
+sh:SPARQLConstraint <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of constraints based on SPARQL SELECT queries.> .
+sh:SPARQLConstraint <A shape is a collection of constraints that may be targeted for certain nodes.> <The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> .
+sh:SPARQLConstraint rdfs:Resource <><> .
+sh:defaultValue <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:defaultValue <http://www.w3.org/2002/07/owl#Ontology> <default value> .
+sh:defaultValue <W3C Shapes Constraint Language (SHACL) Vocabulary> <A default value for a property, for example for user interface tools to pre-populate input fields.> .
+sh:defaultValue rdfs:Resource <><> .
+sh:defaultValue <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> .
+sh:description <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:description <http://www.w3.org/2002/07/owl#Ontology> <description> .
+sh:description <W3C Shapes Constraint Language (SHACL) Vocabulary> <Human-readable descriptions for the property in the context of the surrounding shape.> .
+sh:description rdfs:Resource <><> .
+sh:description <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> .
+sh:group <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:group <http://www.w3.org/2002/07/owl#Ontology> <group> .
+sh:group <W3C Shapes Constraint Language (SHACL) Vocabulary> <Can be used to link to a property group to indicate that a property shape belongs to a group of related property shapes.> .
+sh:group rdfs:Resource <><> .
+sh:group <If set to true then all nodes conform to this.> sh:PropertyGroup .
+sh:group <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> .
+sh:PropertyGroup <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:PropertyGroup <http://www.w3.org/2002/07/owl#Ontology> <Property group> .
+sh:PropertyGroup <W3C Shapes Constraint Language (SHACL) Vocabulary> <Instances of this class represent groups of property shapes that belong together.> .
+sh:PropertyGroup <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+sh:PropertyGroup rdfs:Resource <><> .
+sh:name <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:name <http://www.w3.org/2002/07/owl#Ontology> <name> .
+sh:name <W3C Shapes Constraint Language (SHACL) Vocabulary> <Human-readable labels for the property in the context of the surrounding shape.> .
+sh:name rdfs:Resource <><> .
+sh:name <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.> .
+sh:order <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:order <http://www.w3.org/2002/07/owl#Ontology> <order> .
+sh:order <W3C Shapes Constraint Language (SHACL) Vocabulary> <Specifies the relative order of this compared to its siblings. For example use 0 for the first, 1 for the second.> .
+sh:order rdfs:Resource <><> .
+sh:target <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:target <http://www.w3.org/2002/07/owl#Ontology> <target> .
+sh:target <W3C Shapes Constraint Language (SHACL) Vocabulary> <Links a shape to a target specified by an extension language, for example instances of sh:SPARQLTarget.> .
+sh:target rdfs:Resource <><> .
+sh:target <If set to true then all nodes conform to this.> sh:Target .
+sh:target <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <http://www.w3.org/ns/shacl-shacl#> .
+sh:Target <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:Target <http://www.w3.org/2002/07/owl#Ontology> <Target> .
+sh:Target <W3C Shapes Constraint Language (SHACL) Vocabulary> <The base class of targets such as those based on SPARQL queries.> .
+sh:Target <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+sh:Target rdfs:Resource <><> .
+sh:TargetType <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:TargetType <http://www.w3.org/2002/07/owl#Ontology> <Target type> .
+sh:TargetType <W3C Shapes Constraint Language (SHACL) Vocabulary> <The (meta) class for parameterizable targets.\tInstances of this are instantiated as values of the sh:target property.> .
+sh:TargetType <A shape is a collection of constraints that may be targeted for certain nodes.> sh:Shape .
+sh:TargetType <A shape is a collection of constraints that may be targeted for certain nodes.> <The (single) value of this property represents a path that is matched zero or one times.> .
+sh:TargetType rdfs:Resource <><> .
+sh:SPARQLTarget <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:SPARQLTarget <http://www.w3.org/2002/07/owl#Ontology> <SPARQL target> .
+sh:SPARQLTarget <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of targets that are based on SPARQL queries.> .
+sh:SPARQLTarget <A shape is a collection of constraints that may be targeted for certain nodes.> <The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> .
+sh:SPARQLTarget <A shape is a collection of constraints that may be targeted for certain nodes.> <The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> .
+sh:SPARQLTarget <A shape is a collection of constraints that may be targeted for certain nodes.> sh:Target .
+sh:SPARQLTarget rdfs:Resource <><> .
+sh:SPARQLTargetType <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:SPARQLTargetType <http://www.w3.org/2002/07/owl#Ontology> <SPARQL target type> .
+sh:SPARQLTargetType <W3C Shapes Constraint Language (SHACL) Vocabulary> <The (meta) class for parameterizable targets that are based on SPARQL queries.> .
+sh:SPARQLTargetType <A shape is a collection of constraints that may be targeted for certain nodes.> <The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> .
+sh:SPARQLTargetType <A shape is a collection of constraints that may be targeted for certain nodes.> <The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> .
+sh:SPARQLTargetType <A shape is a collection of constraints that may be targeted for certain nodes.> sh:TargetType .
+sh:SPARQLTargetType rdfs:Resource <><> .
+sh:Function <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:Function <http://www.w3.org/2002/07/owl#Ontology> <Function> .
+sh:Function <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of SHACL functions.> .
+sh:Function <A shape is a collection of constraints that may be targeted for certain nodes.> <The (single) value of this property represents a path that is matched zero or one times.> .
+sh:Function rdfs:Resource <><> .
+sh:returnType <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:returnType <http://www.w3.org/2002/07/owl#Ontology> <return type> .
+sh:returnType <W3C Shapes Constraint Language (SHACL) Vocabulary> <The expected type of values returned by the associated function.> .
+sh:returnType rdfs:Resource <><> .
+sh:returnType <If set to true then all nodes conform to this.> sh:Shape .
+sh:returnType <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:Function .
+sh:SPARQLFunction <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:SPARQLFunction <http://www.w3.org/2002/07/owl#Ontology> <SPARQL function> .
+sh:SPARQLFunction <W3C Shapes Constraint Language (SHACL) Vocabulary> <A function backed by a SPARQL query - either ASK or SELECT.> .
+sh:SPARQLFunction <A shape is a collection of constraints that may be targeted for certain nodes.> <The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.> .
+sh:SPARQLFunction <A shape is a collection of constraints that may be targeted for certain nodes.> <The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.> .
+sh:SPARQLFunction <A shape is a collection of constraints that may be targeted for certain nodes.> sh:Function .
+sh:SPARQLFunction rdfs:Resource <><> .
+sh:resultAnnotation <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:resultAnnotation <http://www.w3.org/2002/07/owl#Ontology> <result annotation> .
+sh:resultAnnotation <W3C Shapes Constraint Language (SHACL) Vocabulary> <Links a SPARQL validator with zero or more sh:ResultAnnotation instances, defining how to derive additional result properties based on the variables of the SELECT query.> .
+sh:resultAnnotation rdfs:Resource <><> .
+sh:resultAnnotation <If set to true then all nodes conform to this.> sh:ResultAnnotation .
+sh:resultAnnotation <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:SPARQLAskExecutable .
+sh:ResultAnnotation <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:ResultAnnotation <http://www.w3.org/2002/07/owl#Ontology> <Result annotation> .
+sh:ResultAnnotation <W3C Shapes Constraint Language (SHACL) Vocabulary> <A class of result annotations, which define the rules to derive the values of a given annotation property as extra values for a validation result.> .
+sh:ResultAnnotation <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+sh:ResultAnnotation rdfs:Resource <><> .
+sh:annotationProperty <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:annotationProperty <http://www.w3.org/2002/07/owl#Ontology> <annotation property> .
+sh:annotationProperty <W3C Shapes Constraint Language (SHACL) Vocabulary> <The annotation property that shall be set.> .
+sh:annotationProperty rdfs:Resource <><> .
+sh:annotationProperty <If set to true then all nodes conform to this.> sh:deactivated .
+sh:annotationProperty <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:ResultAnnotation .
+sh:annotationValue <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:annotationValue <http://www.w3.org/2002/07/owl#Ontology> <annotation value> .
+sh:annotationValue <W3C Shapes Constraint Language (SHACL) Vocabulary> <The (default) values of the annotation property.> .
+sh:annotationValue rdfs:Resource <><> .
+sh:annotationValue <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:ResultAnnotation .
+sh:annotationVarName <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:annotationVarName <http://www.w3.org/2002/07/owl#Ontology> <annotation variable name> .
+sh:annotationVarName <W3C Shapes Constraint Language (SHACL) Vocabulary> <The name of the SPARQL variable from the SELECT clause that shall be used for the values.> .
+sh:annotationVarName rdfs:Resource <><> .
+sh:annotationVarName <If set to true then all nodes conform to this.> xsd:string .
+sh:annotationVarName <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:ResultAnnotation .
+sh:this <http://www.w3.org/ns/shacl#> rdfs:subClassOf .
+sh:this <http://www.w3.org/2002/07/owl#Ontology> <this> .
+sh:this <W3C Shapes Constraint Language (SHACL) Vocabulary> <A node expression that represents the current focus node.> .
+sh:this rdfs:Resource <><> .
+sh:filterShape <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:filterShape <http://www.w3.org/2002/07/owl#Ontology> <filter shape> .
+sh:filterShape <W3C Shapes Constraint Language (SHACL) Vocabulary> <The shape that all input nodes of the expression need to conform to.> .
+sh:filterShape rdfs:Resource <><> .
+sh:filterShape <If set to true then all nodes conform to this.> <http://www.w3.org/ns/shacl-shacl#> .
+sh:nodes <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:nodes <http://www.w3.org/2002/07/owl#Ontology> <nodes> .
+sh:nodes <W3C Shapes Constraint Language (SHACL) Vocabulary> <The node expression producing the input nodes of a filter shape expression.> .
+sh:nodes rdfs:Resource <><> .
+sh:intersection <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:intersection <http://www.w3.org/2002/07/owl#Ontology> <intersection> .
+sh:intersection <W3C Shapes Constraint Language (SHACL) Vocabulary> <A list of node expressions that shall be intersected.> .
+sh:intersection rdfs:Resource <><> .
+sh:union <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:union <http://www.w3.org/2002/07/owl#Ontology> <union> .
+sh:union <W3C Shapes Constraint Language (SHACL) Vocabulary> <A list of node expressions that shall be used together.> .
+sh:union rdfs:Resource <><> .
+sh:ExpressionConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:ExpressionConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <Expression constraint component> .
+sh:ExpressionConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component that can be used to verify that a given node expression produces true for all value nodes.> .
+sh:ExpressionConstraintComponent rdfs:Resource <><> .
+sh:ExpressionConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:ExpressionConstraintComponent-expression .
+sh:ExpressionConstraintComponent-expression <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:ExpressionConstraintComponent-expression rdfs:Resource <><> .
+sh:ExpressionConstraintComponent-expression <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:expression .
+sh:expression <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:expression <http://www.w3.org/2002/07/owl#Ontology> <expression> .
+sh:expression <W3C Shapes Constraint Language (SHACL) Vocabulary> <The node expression that must return true for the value nodes.> .
+sh:expression rdfs:Resource <><> .
+sh:Rule <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:Rule <http://www.w3.org/2002/07/owl#Ontology> <Rule> .
+sh:Rule <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of SHACL rules. Never instantiated directly.> .
+sh:Rule <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+sh:Rule rdfs:Resource <><> .
+sh:rule <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:rule <http://www.w3.org/2002/07/owl#Ontology> <rule> .
+sh:rule <W3C Shapes Constraint Language (SHACL) Vocabulary> <The rules linked to a shape.> .
+sh:rule rdfs:Resource <><> .
+sh:rule <If set to true then all nodes conform to this.> sh:Rule .
+sh:rule <Links a shape to a class, indicating that all instances of the class must conform to the shape.> <http://www.w3.org/ns/shacl-shacl#> .
+sh:condition <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:condition <http://www.w3.org/2002/07/owl#Ontology> <condition> .
+sh:condition <W3C Shapes Constraint Language (SHACL) Vocabulary> <The shapes that the focus nodes need to conform to before a rule is executed on them.> .
+sh:condition rdfs:Resource <><> .
+sh:condition <If set to true then all nodes conform to this.> <http://www.w3.org/ns/shacl-shacl#> .
+sh:condition <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:Rule .
+sh:TripleRule <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:TripleRule <http://www.w3.org/2002/07/owl#Ontology> <A rule based on triple (subject, predicate, object) pattern.> .
+sh:TripleRule <A shape is a collection of constraints that may be targeted for certain nodes.> sh:Rule .
+sh:TripleRule rdfs:Resource <><> .
+sh:subject <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:subject <http://www.w3.org/2002/07/owl#Ontology> <subject> .
+sh:subject <W3C Shapes Constraint Language (SHACL) Vocabulary> <An expression producing the resources that shall be inferred as subjects.> .
+sh:subject rdfs:Resource <><> .
+sh:subject <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:TripleRule .
+sh:predicate <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:predicate <http://www.w3.org/2002/07/owl#Ontology> <predicate> .
+sh:predicate <W3C Shapes Constraint Language (SHACL) Vocabulary> <An expression producing the properties that shall be inferred as predicates.> .
+sh:predicate rdfs:Resource <><> .
+sh:predicate <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:TripleRule .
+sh:object <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:object <http://www.w3.org/2002/07/owl#Ontology> <object> .
+sh:object <W3C Shapes Constraint Language (SHACL) Vocabulary> <An expression producing the nodes that shall be inferred as objects.> .
+sh:object rdfs:Resource <><> .
+sh:object <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:TripleRule .
+sh:SPARQLRule <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:SPARQLRule <http://www.w3.org/2002/07/owl#Ontology> <SPARQL CONSTRUCT rule> .
+sh:SPARQLRule <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of SHACL rules based on SPARQL CONSTRUCT queries.> .
+sh:SPARQLRule <A shape is a collection of constraints that may be targeted for certain nodes.> sh:SPARQLConstructExecutable .
+sh:SPARQLRule <A shape is a collection of constraints that may be targeted for certain nodes.> sh:Rule .
+sh:SPARQLRule rdfs:Resource <><> .
+sh:JSExecutable <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:JSExecutable <http://www.w3.org/2002/07/owl#Ontology> <JavaScript executable> .
+sh:JSExecutable <W3C Shapes Constraint Language (SHACL) Vocabulary> <Abstract base class of resources that declare an executable JavaScript.> .
+sh:JSExecutable <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+sh:JSExecutable rdfs:Resource <><> .
+sh:JSTarget <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:JSTarget <http://www.w3.org/2002/07/owl#Ontology> <JavaScript target> .
+sh:JSTarget <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of targets that are based on JavaScript functions.> .
+sh:JSTarget <A shape is a collection of constraints that may be targeted for certain nodes.> sh:Target .
+sh:JSTarget <A shape is a collection of constraints that may be targeted for certain nodes.> sh:JSExecutable .
+sh:JSTarget rdfs:Resource <><> .
+sh:JSTargetType <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:JSTargetType <http://www.w3.org/2002/07/owl#Ontology> <JavaScript target type> .
+sh:JSTargetType <W3C Shapes Constraint Language (SHACL) Vocabulary> <The (meta) class for parameterizable targets that are based on JavaScript functions.> .
+sh:JSTargetType <A shape is a collection of constraints that may be targeted for certain nodes.> sh:TargetType .
+sh:JSTargetType <A shape is a collection of constraints that may be targeted for certain nodes.> sh:JSExecutable .
+sh:JSTargetType rdfs:Resource <><> .
+sh:JSConstraint <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:JSConstraint <http://www.w3.org/2002/07/owl#Ontology> <JavaScript-based constraint> .
+sh:JSConstraint <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of constraints backed by a JavaScript function.> .
+sh:JSConstraint <A shape is a collection of constraints that may be targeted for certain nodes.> sh:JSExecutable .
+sh:JSConstraint rdfs:Resource <><> .
+sh:JSConstraintComponent <http://www.w3.org/ns/shacl#> <The constraint component that is the source of the result.> .
+sh:JSConstraintComponent <http://www.w3.org/2002/07/owl#Ontology> <JavaScript constraint component> .
+sh:JSConstraintComponent <W3C Shapes Constraint Language (SHACL) Vocabulary> <A constraint component with the parameter sh:js linking to a sh:JSConstraint containing a sh:script.> .
+sh:JSConstraintComponent rdfs:Resource <><> .
+sh:JSConstraintComponent <Superclass of components that can take parameters, especially functions and constraint components.> sh:JSConstraint-js .
+sh:JSConstraint-js <http://www.w3.org/ns/shacl#> <The parameters of a function or constraint component.> .
+sh:JSConstraint-js rdfs:Resource <><> .
+sh:JSConstraint-js <An entailment regime that indicates what kind of inferencing is required by a shapes graph.> sh:js .
+sh:js <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:js <http://www.w3.org/2002/07/owl#Ontology> <JavaScript constraint> .
+sh:js <W3C Shapes Constraint Language (SHACL) Vocabulary> <Constraints expressed in JavaScript.> .
+sh:js rdfs:Resource <><> .
+sh:js <If set to true then all nodes conform to this.> sh:JSConstraint .
+sh:jsFunctionName <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:jsFunctionName <http://www.w3.org/2002/07/owl#Ontology> <JavaScript function name> .
+sh:jsFunctionName <W3C Shapes Constraint Language (SHACL) Vocabulary> <The name of the JavaScript function to execute.> .
+sh:jsFunctionName rdfs:Resource <><> .
+sh:jsFunctionName <If set to true then all nodes conform to this.> xsd:string .
+sh:jsFunctionName <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:JSExecutable .
+sh:jsLibrary <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:jsLibrary <http://www.w3.org/2002/07/owl#Ontology> <JavaScript library> .
+sh:jsLibrary <W3C Shapes Constraint Language (SHACL) Vocabulary> <Declares which JavaScript libraries are needed to execute this.> .
+sh:jsLibrary rdfs:Resource <><> .
+sh:jsLibrary <If set to true then all nodes conform to this.> sh:JSLibrary .
+sh:JSLibrary <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:JSLibrary <http://www.w3.org/2002/07/owl#Ontology> <JavaScript library> .
+sh:JSLibrary <W3C Shapes Constraint Language (SHACL) Vocabulary> <Represents a JavaScript library, typically identified by one or more URLs of files to include.> .
+sh:JSLibrary <A shape is a collection of constraints that may be targeted for certain nodes.> rdfs:subClassOf .
+sh:JSLibrary rdfs:Resource <><> .
+sh:jsLibraryURL <http://www.w3.org/ns/shacl#> sh:deactivated .
+sh:jsLibraryURL <http://www.w3.org/2002/07/owl#Ontology> <JavaScript library URL> .
+sh:jsLibraryURL <W3C Shapes Constraint Language (SHACL) Vocabulary> <Declares the URLs of a JavaScript library. This should be the absolute URL of a JavaScript file. Implementations may redirect those to local files.> .
+sh:jsLibraryURL rdfs:Resource <><> .
+sh:jsLibraryURL <If set to true then all nodes conform to this.> xsd:anyURI .
+sh:jsLibraryURL <Links a shape to a class, indicating that all instances of the class must conform to the shape.> sh:JSLibrary .
+sh:JSFunction <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:JSFunction <http://www.w3.org/2002/07/owl#Ontology> <JavaScript function> .
+sh:JSFunction <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of SHACL functions that execute a JavaScript function when called.> .
+sh:JSFunction <A shape is a collection of constraints that may be targeted for certain nodes.> sh:Function .
+sh:JSFunction <A shape is a collection of constraints that may be targeted for certain nodes.> sh:JSExecutable .
+sh:JSFunction rdfs:Resource <><> .
+sh:JSRule <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:JSRule <http://www.w3.org/2002/07/owl#Ontology> <JavaScript rule> .
+sh:JSRule <W3C Shapes Constraint Language (SHACL) Vocabulary> <The class of SHACL rules expressed using JavaScript.> .
+sh:JSRule <A shape is a collection of constraints that may be targeted for certain nodes.> sh:Rule .
+sh:JSRule <A shape is a collection of constraints that may be targeted for certain nodes.> sh:JSExecutable .
+sh:JSRule rdfs:Resource <><> .
+sh:JSValidator <http://www.w3.org/ns/shacl#> sh:Shape .
+sh:JSValidator <http://www.w3.org/2002/07/owl#Ontology> <JavaScript validator> .
+sh:JSValidator <W3C Shapes Constraint Language (SHACL) Vocabulary> <A SHACL validator based on JavaScript. This can be used to declare SHACL constraint components that perform JavaScript-based validation when used.> .
+sh:JSValidator <A shape is a collection of constraints that may be targeted for certain nodes.> <The validator(s) used to evaluate constraints of either node or property shapes.> .
+sh:JSValidator <A shape is a collection of constraints that may be targeted for certain nodes.> sh:JSExecutable .
+sh:JSValidator rdfs:Resource <><> .
