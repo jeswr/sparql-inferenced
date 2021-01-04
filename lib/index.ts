@@ -99,6 +99,8 @@ async function applyHyLAR(
   implicit.removeQuads(factsToQuads(deletions).implicit);
   explicit.removeQuads(factsToQuads(deletions).explicit);
 
+  console.log(factsToQuads(additions).implicit)
+
   return { additions, deletions };
 }
 
