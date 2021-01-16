@@ -175,10 +175,12 @@ export async function incrementalReasoning(
     }
   }
 
-  // TODO:
+  // TODO (future work):
   // Step 3: Run other (i.e. sh:rule)
   // If there are *any* new triples; repeat
 }
+
+export default incrementalReasoning;
 
 // Method to collect *whole* shape in one g
 // If minCount < 1 then optional | optional every line
