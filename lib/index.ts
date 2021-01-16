@@ -6,8 +6,6 @@ import type { Quad, Term } from 'rdf-js';
 import type { IQueryResult } from '@comunica/actor-init-sparql';
 import { newEngine } from '@comunica/actor-init-sparql-rdfjs';
 import type { OTerm, Store as N3Store } from 'n3';
-// TODO: Remove this dependency once this engine is re-integrated with on2ts
-// import { } from 'rdf-validate-shacl';
 import { quadToStringQuad } from 'rdf-string-ttl';
 import md5 from 'md5';
 import { blankNode } from '@rdfjs/data-model';
@@ -187,9 +185,6 @@ export async function incrementalReasoning(
         const stringQuad = quadToStringQuad(quad);
 
         const hash = md5(stringQuad.subject + stringQuad.predicate + stringQuad.object + (stringQuad.graph ?? ''));
-        // console.log(quad, stringQuad, hash, hashes[hash],
-        // implicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length,
-        // explicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length)
         if (
           !(hashes[hash])
           && (implicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length === 0)
@@ -201,12 +196,6 @@ export async function incrementalReasoning(
         }
       }
     }
-
-    // console.log(ins.length, del.length);
-
-    // if (ins.length === 3) {
-    //   console.log(ins)
-    // }
 
     if (ins.length > 0 || del.length > 0) {
       // TODO: Optimise & check if needed
@@ -224,21 +213,3 @@ export async function incrementalReasoning(
 }
 
 export default incrementalReasoning;
-
-// Method to collect *whole* shape in one g
-// If minCount < 1 then optional | optional every line
-
-// PREFIX sh: <http://www.w3.org/ns/shacl#>
-// PREFIX ex: <http://example.org/>
-
-// CONSTRUCT {
-
-// ex:addDocumentAuthor sh:property ?o, ?closed .
-// ?o sh:path ?t .
-
-// } WHERE {
-
-// ex:addDocumentAuthor sh:property ?o, ?closed .
-// ?o sh:path ?t .
-
-// } LIMIT 10
