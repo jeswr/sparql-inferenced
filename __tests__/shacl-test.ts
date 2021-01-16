@@ -122,7 +122,7 @@ describe('Testing properties of inferencing over shacl constraints with shacl on
     expect(implicit.countQuads(
       propertyShape,
       namedNode('http://www.w3.org/ns/shacl#closed'),
-      literal('true', 'http://www.w3.org/2001/XMLSchema#boolean'),
+      literal('false', 'http://www.w3.org/2001/XMLSchema#boolean'),
       null,
     )).toEqual(1);
   });
