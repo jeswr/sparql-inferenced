@@ -2,17 +2,21 @@
   "name": "sparql-inferenced",
   "version": "1.0.0",
   "description": "An RDF inferencer that extends the HyLAR (https://github.com/ucbl/HyLAR-Reasoner.git) inferencing engine to allow inferencing with SPARQL Construct queries",
-  "main": "dist/lib/index.js",
-  "types": "dist/lib/index.d.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "directories": {
+    "lib": "lib"
+  },
   "files": [
-    "dist/lib/*"
+    "dist"
   ],
   "scripts": {
     "test": "jest",
-    "lint": "eslint lib/* __tests__/* --ext .ts",
-    "lint:fix": "eslint lib/* __tests__/* --ext .ts --fix",
+    "lint": "eslint lib/* __tests__/*.ts --ext .ts",
+    "lint:fix": "eslint lib/* __tests__/*.ts --ext .ts --fix",
     "build": "tsc",
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -32,10 +36,9 @@
   "homepage": "https://github.com/jeswr/sparql-inferenced#readme",
   "dependencies": {
     "@comunica/actor-init-sparql-rdfjs": "^1.18.1",
-    "hylar-core": "github:jeswr/hylar-core",
+    "hylar-core": "^1.1.0",
     "md5": "^2.3.0",
-    "rdf-string-ttl": "^1.1.0",
-    "rdf-validate-shacl": "^0.2.5"
+    "rdf-string-ttl": "^1.1.0"
   },
   "devDependencies": {
     "@comunica/actor-init-sparql": "^1.18.1",
@@ -76,5 +79,10 @@
     "lint",
     "build",
     "test"
-  ]
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
 }

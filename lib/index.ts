@@ -7,8 +7,7 @@ import type { IQueryResult } from '@comunica/actor-init-sparql';
 import { newEngine } from '@comunica/actor-init-sparql-rdfjs';
 import type { OTerm, Store as N3Store } from 'n3';
 // TODO: Remove this dependency once this engine is re-integrated with on2ts
-// @ts-ignore
-import { } from 'rdf-validate-shacl';
+// import { } from 'rdf-validate-shacl';
 import { quadToStringQuad } from 'rdf-string-ttl';
 import md5 from 'md5';
 
@@ -93,7 +92,7 @@ async function applyHyLAR(
   );
 
   // Step 2: Apply Hylar updates
-  console.log('additions', additions)
+  // console.log('additions', additions)
 
   implicit.addQuads(factsToQuads(additions).implicit);
   explicit.addQuads(factsToQuads(additions).explicit);
@@ -101,7 +100,7 @@ async function applyHyLAR(
   implicit.removeQuads(factsToQuads(deletions).implicit);
   explicit.removeQuads(factsToQuads(deletions).explicit);
 
-  console.log(factsToQuads(additions).implicit)
+  // console.log(factsToQuads(additions).implicit)
 
   return { additions, deletions };
 }
