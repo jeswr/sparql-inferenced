@@ -68,7 +68,7 @@ CONSTRUCT {
    * Implicit now contains inferenced triples including
    * 
    * ex:myShape sh:closed false (from Construct inferences)
-   * _b:1 a sh:ProperyShape ;   (from owl2rl inferences)
+   * _b:1 a sh:PropertyShape ;   (from owl2rl inferences)
    *   sh:order 0 ;             (from Construct inferences)
    *   sh:minCount 0 .          (from Construct inferences) 
    */
