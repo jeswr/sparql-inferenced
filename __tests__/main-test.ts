@@ -28,7 +28,7 @@ describe('Should run test', () => {
     const implicit = new Store();
     const parser = new Parser();
 
-    const originalQuads = parser.parse(fs.readFileSync(path.join(__dirname, 'files', 'shacl.ttl')).toString());
+    const originalQuads = parser.parse(fs.readFileSync(path.join('__tests__', 'files', 'shacl.ttl')).toString());
     // console.log(originalQuads)
 
     await incrementalReasoning(originalQuads, [], explicit, implicit, owl2rl, []);
@@ -62,7 +62,7 @@ describe('Should run test', () => {
     // console.log('-------------------------------------');
     await incrementalReasoning(toAdd, [], explicit, implicit, owl2rl, []);
     expect(explicit.getQuads(null, null, null, null).length).toEqual(1131);
-    expect(implicit.getQuads(null, null, null, null).length).toEqual(428);
+    expect(implicit.getQuads(null, null, null, null).length).toEqual(425);
     // expect(implicit.getQuads(blankNode('1'), namedNode('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), namedNode('http://www.w3.org/ns/shacl#PropertyShape'), null).length).toEqual(1);
   });
 });
