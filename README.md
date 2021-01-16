@@ -23,7 +23,7 @@ const shaclConstraint = parser.parse(`
 ex:myShape a sh:NodeShape ;
   sh:property [
     sh:path foaf:friend ;
-  ]
+  ] .
 `)
 
 const SHACLInferences = [`

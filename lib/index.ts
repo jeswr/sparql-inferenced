@@ -10,6 +10,7 @@ import type { OTerm, Store as N3Store } from 'n3';
 // import { } from 'rdf-validate-shacl';
 import { quadToStringQuad } from 'rdf-string-ttl';
 import md5 from 'md5';
+import { blankNode } from '@rdfjs/data-model';
 
 interface Store {
   query(q: string): IQueryResult;
@@ -79,6 +80,8 @@ async function applyHyLAR(
   explicit: N3Store,
   implicit: N3Store,
   rules: Rule[],
+  // Flag whether the 'inserts' and 'deletes' are implicit
+  implicitChanges = false,
 ) {
   // Step 1: Run Hylar
   const { additions, deletions } = await incremental(
@@ -94,11 +97,18 @@ async function applyHyLAR(
   // Step 2: Apply Hylar updates
   // console.log('additions', additions)
 
-  implicit.addQuads(factsToQuads(additions).implicit);
-  explicit.addQuads(factsToQuads(additions).explicit);
+  // console.log(factsToQuads(additions));
 
+  if (implicitChanges) {
+    implicit.addQuads(factsToQuads(additions).explicit);
+    implicit.removeQuads(factsToQuads(deletions).explicit);
+  } else {
+    explicit.addQuads(factsToQuads(additions).explicit);
+    explicit.removeQuads(factsToQuads(deletions).explicit);
+  }
+
+  implicit.addQuads(factsToQuads(additions).implicit);
   implicit.removeQuads(factsToQuads(deletions).implicit);
-  explicit.removeQuads(factsToQuads(deletions).explicit);
 
   // console.log(factsToQuads(additions).implicit)
 
@@ -137,8 +147,17 @@ export async function incrementalReasoning(
     return combinedEngine.query(q, { sources: [implicit, explicit] });
   }
 
+  let impl = false;
+
   while (ins.length > 0 || del.length > 0) {
-    await applyHyLAR(ins, del, explicit, implicit, rules);
+    // console.log(ins.length, del.length);
+
+    // if (ins.length === 3) {
+    //   console.log(ins);
+    // }
+
+    await applyHyLAR(ins, del, explicit, implicit, rules, impl);
+    impl = true;
 
     // Step 2: Run construct queries
     ins = [];
@@ -146,24 +165,48 @@ export async function incrementalReasoning(
     const hashes: Record<string, boolean> = {};
 
     for (const query of constructQueries) {
+      // console.log('running query', query)
       const result = await combinedQuery(query);
       if (result.type !== 'quads') {
         throw new Error('Quads Expected');
       }
       const quads = await result.quads(); // TODO: Optimize
+      // console.log('result', quads)
       for (const quad of quads) {
+        // TODO FIX THIS
+        if (quad.subject.termType === 'BlankNode') {
+          quad.subject = blankNode(/[^_]+(?:[^]{2})$/.exec(quad.subject.value)?.[0].replace(/[^]{2}$/, ''));
+        }
+        if (quad.object.termType === 'BlankNode') {
+          quad.object = blankNode(/[^_]+(?:[^]{2})$/.exec(quad.object.value)?.[0].replace(/[^]{2}$/, ''));
+        }
+        if (quad.graph?.termType === 'BlankNode') {
+          quad.graph = blankNode(/[^_]+(?:[^]{2})$/.exec(quad.graph.value)?.[0].replace(/[^]{2}$/, ''));
+        }
+
         const stringQuad = quadToStringQuad(quad);
+
         const hash = md5(stringQuad.subject + stringQuad.predicate + stringQuad.object + (stringQuad.graph ?? ''));
+        // console.log(quad, stringQuad, hash, hashes[hash],
+        // implicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length,
+        // explicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length)
         if (
           !(hashes[hash])
-          && implicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length === 0
-          && explicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length === 0
+          && (implicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length === 0)
+          && (explicit.getQuads(quad.subject, quad.predicate, quad.object, quad.graph).length === 0)
         ) { // TODO: Double check
+          // console.log('adding quads', hash, quad)
           hashes[hash] = true;
           ins.push(quad);
         }
       }
     }
+
+    // console.log(ins.length, del.length);
+
+    // if (ins.length === 3) {
+    //   console.log(ins)
+    // }
 
     if (ins.length > 0 || del.length > 0) {
       // TODO: Optimise & check if needed
