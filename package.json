@@ -26,6 +26,7 @@
     "SPARQL",
     "HyLAR",
     "RDF",
+    "OWL",
     "inference"
   ],
   "author": "Jesse Wright <jesse.wright@anu.edu.au>",
