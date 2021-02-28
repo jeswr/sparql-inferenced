@@ -7,6 +7,7 @@ An RDF inferencer that extends the [HyLAR](https://github.com/ucbl/HyLAR-Reasone
 import inferencer from 'sparql-inferenced'
 import { Store, Parser } from 'n3';
 import { owl2rl } from 'hylar-core';
+import constructInferences from 'construct-inferences-shacl';
 import * as fs from 'fs'
 
 const parser = new Parser();
@@ -26,32 +27,14 @@ ex:myShape a sh:NodeShape ;
   ] .
 `)
 
-const SHACLInferences = [`
-PREFIX sh: <http://www.w3.org/ns/shacl#>
+const SHACLInferences = [...constructInferences, `
+PREFIX ex: <http://example.org#>
 
 CONSTRUCT {
-	?s sh:minCount 0
+	?s ex:myCustomConstraint false
 } WHERE {
   ?s a sh:PropertyShape
-  FILTER(NOT EXISTS { ?s sh:minCount ?o })
-}
-`, `
-PREFIX sh: <http://www.w3.org/ns/shacl#>
-
-CONSTRUCT {
-	?s sh:order 0
-} WHERE {
-  ?s a sh:PropertyShape
-  FILTER(NOT EXISTS { ?s sh:order ?o })
-}
-`, `
-PREFIX sh: <http://www.w3.org/ns/shacl#>
-
-CONSTRUCT {
-	?s sh:closed false
-} WHERE {
-  ?s a sh:PropertyShape
-  FILTER(NOT EXISTS { ?s sh:closed ?o })
+  FILTER(NOT EXISTS { ?s ex:myCustomConstraint ?o })
 }
 `]
 
