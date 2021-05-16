@@ -173,13 +173,13 @@ export async function incrementalReasoning(
       for (const quad of quads) {
         // TODO FIX THIS
         if (quad.subject.termType === 'BlankNode') {
-          quad.subject = blankNode(/[^_]+(?:[^]{2})$/.exec(quad.subject.value)?.[0].replace(/[^]{2}$/, ''));
+          quad.subject = blankNode(/[^_]+(?:[^]{2})$/.exec(quad.subject.value)?.[0].replace(/[^]{1}$/, ''));
         }
         if (quad.object.termType === 'BlankNode') {
-          quad.object = blankNode(/[^_]+(?:[^]{2})$/.exec(quad.object.value)?.[0].replace(/[^]{2}$/, ''));
+          quad.object = blankNode(/[^_]+(?:[^]{2})$/.exec(quad.object.value)?.[0].replace(/[^]{1}$/, ''));
         }
         if (quad.graph?.termType === 'BlankNode') {
-          quad.graph = blankNode(/[^_]+(?:[^]{2})$/.exec(quad.graph.value)?.[0].replace(/[^]{2}$/, ''));
+          quad.graph = blankNode(/[^_]+(?:[^]{2})$/.exec(quad.graph.value)?.[0].replace(/[^]{1}$/, ''));
         }
 
         const stringQuad = quadToStringQuad(quad);
