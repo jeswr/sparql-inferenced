@@ -1,4 +1,4 @@
-import { Store, Parser, Writer } from 'n3';
+import { Store, Parser } from 'n3';
 import { owl2rl } from 'hylar-core';
 import * as fs from 'fs';
 import path from 'path';
