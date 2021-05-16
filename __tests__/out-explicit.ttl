@@ -376,7 +376,7 @@ sh:ClosedConstraintComponent-closed sh:datatype xsd:boolean .
 sh:ClosedConstraintComponent-ignoredProperties rdf:type sh:Parameter .
 sh:ClosedConstraintComponent-ignoredProperties rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:ClosedConstraintComponent-ignoredProperties sh:path sh:ignoredProperties .
-sh:ClosedConstraintComponent-ignoredProperties sh:optional "true"^^xsd:boolean .
+sh:ClosedConstraintComponent-ignoredProperties sh:optional true .
 sh:closed rdf:type rdf:Property .
 sh:closed rdfs:label "closed"@en .
 sh:closed rdfs:comment "If set to true then the shape is closed."@en .
@@ -401,7 +401,7 @@ sh:DatatypeConstraintComponent-datatype rdf:type sh:Parameter .
 sh:DatatypeConstraintComponent-datatype rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:DatatypeConstraintComponent-datatype sh:path sh:datatype .
 sh:DatatypeConstraintComponent-datatype sh:nodeKind sh:IRI .
-sh:DatatypeConstraintComponent-datatype sh:maxCount "1"^^xsd:integer .
+sh:DatatypeConstraintComponent-datatype sh:maxCount 1 .
 sh:maxCount rdf:type rdf:Property .
 sh:maxCount rdfs:label "max count"@en .
 sh:maxCount rdfs:comment "Specifies the maximum number of values in the set of value nodes."@en .
@@ -455,7 +455,7 @@ sh:InConstraintComponent sh:parameter sh:InConstraintComponent-in .
 sh:InConstraintComponent-in rdf:type sh:Parameter .
 sh:InConstraintComponent-in rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:InConstraintComponent-in sh:path sh:in .
-sh:InConstraintComponent-in sh:maxCount "1"^^xsd:integer .
+sh:InConstraintComponent-in sh:maxCount 1 .
 sh:in rdf:type rdf:Property .
 sh:in rdfs:label "in"@en .
 sh:in rdfs:comment "Specifies a list of allowed values so that each value node must be among the members of the given list."@en .
@@ -469,7 +469,7 @@ sh:LanguageInConstraintComponent sh:parameter sh:LanguageInConstraintComponent-l
 sh:LanguageInConstraintComponent-languageIn rdf:type sh:Parameter .
 sh:LanguageInConstraintComponent-languageIn rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:LanguageInConstraintComponent-languageIn sh:path sh:languageIn .
-sh:LanguageInConstraintComponent-languageIn sh:maxCount "1"^^xsd:integer .
+sh:LanguageInConstraintComponent-languageIn sh:maxCount 1 .
 sh:languageIn rdf:type rdf:Property .
 sh:languageIn rdfs:label "language in"@en .
 sh:languageIn rdfs:comment "Specifies a list of language tags that all value nodes must have."@en .
@@ -512,7 +512,7 @@ sh:MaxCountConstraintComponent-maxCount rdf:type sh:Parameter .
 sh:MaxCountConstraintComponent-maxCount rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:MaxCountConstraintComponent-maxCount sh:path sh:maxCount .
 sh:MaxCountConstraintComponent-maxCount sh:datatype xsd:integer .
-sh:MaxCountConstraintComponent-maxCount sh:maxCount "1"^^xsd:integer .
+sh:MaxCountConstraintComponent-maxCount sh:maxCount 1 .
 sh:MaxExclusiveConstraintComponent rdf:type sh:ConstraintComponent .
 sh:MaxExclusiveConstraintComponent rdfs:label "Max-exclusive constraint component"@en .
 sh:MaxExclusiveConstraintComponent rdfs:comment "A constraint component that can be used to restrict the range of value nodes with a maximum exclusive value."@en .
@@ -522,7 +522,7 @@ sh:MaxExclusiveConstraintComponent-maxExclusive rdf:type sh:Parameter .
 sh:MaxExclusiveConstraintComponent-maxExclusive rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:MaxExclusiveConstraintComponent-maxExclusive sh:path sh:maxExclusive .
 sh:MaxExclusiveConstraintComponent-maxExclusive sh:nodeKind sh:Literal .
-sh:MaxExclusiveConstraintComponent-maxExclusive sh:maxCount "1"^^xsd:integer .
+sh:MaxExclusiveConstraintComponent-maxExclusive sh:maxCount 1 .
 sh:maxExclusive rdf:type rdf:Property .
 sh:maxExclusive rdfs:label "max exclusive"@en .
 sh:maxExclusive rdfs:comment "Specifies the maximum exclusive value of each value node."@en .
@@ -536,7 +536,7 @@ sh:MaxInclusiveConstraintComponent-maxInclusive rdf:type sh:Parameter .
 sh:MaxInclusiveConstraintComponent-maxInclusive rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:MaxInclusiveConstraintComponent-maxInclusive sh:path sh:maxInclusive .
 sh:MaxInclusiveConstraintComponent-maxInclusive sh:nodeKind sh:Literal .
-sh:MaxInclusiveConstraintComponent-maxInclusive sh:maxCount "1"^^xsd:integer .
+sh:MaxInclusiveConstraintComponent-maxInclusive sh:maxCount 1 .
 sh:maxInclusive rdf:type rdf:Property .
 sh:maxInclusive rdfs:label "max inclusive"@en .
 sh:maxInclusive rdfs:comment "Specifies the maximum inclusive value of each value node."@en .
@@ -550,7 +550,7 @@ sh:MaxLengthConstraintComponent-maxLength rdf:type sh:Parameter .
 sh:MaxLengthConstraintComponent-maxLength rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:MaxLengthConstraintComponent-maxLength sh:path sh:maxLength .
 sh:MaxLengthConstraintComponent-maxLength sh:datatype xsd:integer .
-sh:MaxLengthConstraintComponent-maxLength sh:maxCount "1"^^xsd:integer .
+sh:MaxLengthConstraintComponent-maxLength sh:maxCount 1 .
 sh:maxLength rdf:type rdf:Property .
 sh:maxLength rdfs:label "max length"@en .
 sh:maxLength rdfs:comment "Specifies the maximum string length of each value node."@en .
@@ -565,7 +565,7 @@ sh:MinCountConstraintComponent-minCount rdf:type sh:Parameter .
 sh:MinCountConstraintComponent-minCount rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:MinCountConstraintComponent-minCount sh:path sh:minCount .
 sh:MinCountConstraintComponent-minCount sh:datatype xsd:integer .
-sh:MinCountConstraintComponent-minCount sh:maxCount "1"^^xsd:integer .
+sh:MinCountConstraintComponent-minCount sh:maxCount 1 .
 sh:minCount rdf:type rdf:Property .
 sh:minCount rdfs:label "min count"@en .
 sh:minCount rdfs:comment "Specifies the minimum number of values in the set of value nodes."@en .
@@ -580,7 +580,7 @@ sh:MinExclusiveConstraintComponent-minExclusive rdf:type sh:Parameter .
 sh:MinExclusiveConstraintComponent-minExclusive rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:MinExclusiveConstraintComponent-minExclusive sh:path sh:minExclusive .
 sh:MinExclusiveConstraintComponent-minExclusive sh:nodeKind sh:Literal .
-sh:MinExclusiveConstraintComponent-minExclusive sh:maxCount "1"^^xsd:integer .
+sh:MinExclusiveConstraintComponent-minExclusive sh:maxCount 1 .
 sh:minExclusive rdf:type rdf:Property .
 sh:minExclusive rdfs:label "min exclusive"@en .
 sh:minExclusive rdfs:comment "Specifies the minimum exclusive value of each value node."@en .
@@ -594,7 +594,7 @@ sh:MinInclusiveConstraintComponent-minInclusive rdf:type sh:Parameter .
 sh:MinInclusiveConstraintComponent-minInclusive rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:MinInclusiveConstraintComponent-minInclusive sh:path sh:minInclusive .
 sh:MinInclusiveConstraintComponent-minInclusive sh:nodeKind sh:Literal .
-sh:MinInclusiveConstraintComponent-minInclusive sh:maxCount "1"^^xsd:integer .
+sh:MinInclusiveConstraintComponent-minInclusive sh:maxCount 1 .
 sh:minInclusive rdf:type rdf:Property .
 sh:minInclusive rdfs:label "min inclusive"@en .
 sh:minInclusive rdfs:comment "Specifies the minimum inclusive value of each value node."@en .
@@ -608,7 +608,7 @@ sh:MinLengthConstraintComponent-minLength rdf:type sh:Parameter .
 sh:MinLengthConstraintComponent-minLength rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:MinLengthConstraintComponent-minLength sh:path sh:minLength .
 sh:MinLengthConstraintComponent-minLength sh:datatype xsd:integer .
-sh:MinLengthConstraintComponent-minLength sh:maxCount "1"^^xsd:integer .
+sh:MinLengthConstraintComponent-minLength sh:maxCount 1 .
 sh:minLength rdf:type rdf:Property .
 sh:minLength rdfs:label "min length"@en .
 sh:minLength rdfs:comment "Specifies the minimum string length of each value node."@en .
@@ -635,7 +635,7 @@ sh:NodeKindConstraintComponent sh:parameter sh:NodeKindConstraintComponent-nodeK
 sh:NodeKindConstraintComponent-nodeKind rdf:type sh:Parameter .
 sh:NodeKindConstraintComponent-nodeKind rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:NodeKindConstraintComponent-nodeKind sh:path sh:nodeKind .
-sh:NodeKindConstraintComponent-nodeKind sh:maxCount "1"^^xsd:integer .
+sh:NodeKindConstraintComponent-nodeKind sh:maxCount 1 .
 sh:NodeKindConstraintComponent-nodeKind sh:in _:n3-1 .
 _:n3-1 rdf:first sh:BlankNode .
 _:n3-1 rdf:rest _:n3-2 .
@@ -688,7 +688,7 @@ sh:PatternConstraintComponent-pattern sh:datatype xsd:string .
 sh:PatternConstraintComponent-flags rdf:type sh:Parameter .
 sh:PatternConstraintComponent-flags rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:PatternConstraintComponent-flags sh:path sh:flags .
-sh:PatternConstraintComponent-flags sh:optional "true"^^xsd:boolean .
+sh:PatternConstraintComponent-flags sh:optional true .
 sh:PatternConstraintComponent-flags sh:datatype xsd:string .
 sh:pattern rdf:type rdf:Property .
 sh:pattern rdfs:label "pattern"@en .
@@ -731,7 +731,7 @@ sh:QualifiedMaxCountConstraintComponent-qualifiedValueShape sh:path sh:qualified
 sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint rdf:type sh:Parameter .
 sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint sh:path sh:qualifiedValueShapesDisjoint .
-sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint sh:optional "true"^^xsd:boolean .
+sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint sh:optional true .
 sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint sh:datatype xsd:boolean .
 sh:qualifiedMaxCount rdf:type rdf:Property .
 sh:qualifiedMaxCount rdfs:label "qualified max count"@en .
@@ -765,7 +765,7 @@ sh:QualifiedMinCountConstraintComponent-qualifiedValueShape sh:path sh:qualified
 sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint rdf:type sh:Parameter .
 sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint sh:path sh:qualifiedValueShapesDisjoint .
-sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint sh:optional "true"^^xsd:boolean .
+sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint sh:optional true .
 sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint sh:datatype xsd:boolean .
 sh:qualifiedMinCount rdf:type rdf:Property .
 sh:qualifiedMinCount rdfs:label "qualified min count"@en .
@@ -781,7 +781,7 @@ sh:UniqueLangConstraintComponent-uniqueLang rdf:type sh:Parameter .
 sh:UniqueLangConstraintComponent-uniqueLang rdfs:isDefinedBy <http://www.w3.org/ns/shacl#> .
 sh:UniqueLangConstraintComponent-uniqueLang sh:path sh:uniqueLang .
 sh:UniqueLangConstraintComponent-uniqueLang sh:datatype xsd:boolean .
-sh:UniqueLangConstraintComponent-uniqueLang sh:maxCount "1"^^xsd:integer .
+sh:UniqueLangConstraintComponent-uniqueLang sh:maxCount 1 .
 sh:uniqueLang rdf:type rdf:Property .
 sh:uniqueLang rdfs:label "unique languages"@en .
 sh:uniqueLang rdfs:comment "Specifies whether all node values must have a unique (or no) language tag."@en .
