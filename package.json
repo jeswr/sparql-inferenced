@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/jeswr/sparql-inferenced#readme",
   "dependencies": {
-    "@comunica/actor-init-sparql-rdfjs": "^1.19.0",
+    "@comunica/actor-init-sparql-rdfjs": "^2.0.1",
     "hylar-core": "^1.1.0",
     "md5": "^2.3.0",
     "rdf-string-ttl": "^1.1.0"
