@@ -42,7 +42,7 @@
     "rdf-string-ttl": "^1.1.0"
   },
   "devDependencies": {
-    "@comunica/actor-init-sparql": "^1.18.1",
+    "@comunica/actor-init-sparql": "^2.0.1",
     "@ontologies/shacl": "^2.0.0",
     "@types/jest": "^27.0.0",
     "@types/md5": "^2.2.1",
