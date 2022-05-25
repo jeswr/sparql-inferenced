@@ -1,4 +1,4 @@
-:alert: Before looking at this package I would reccomend checking out my more recent reasoning work at https://github.com/comunica/comunica-feature-reasoning/, which is part of the [Comunica Engine](https://github.com/comunica/comunica) and has ongoing support via the [Comunica Association](https://comunica.dev/association/) :alert:
+:warning: Before looking at this package I would reccomend checking out my more recent reasoning work at https://github.com/comunica/comunica-feature-reasoning/, which is part of the [Comunica Engine](https://github.com/comunica/comunica) and has ongoing support via the [Comunica Association](https://comunica.dev/association/) :warning:
 
 # sparql-inferenced
 An RDF inferencer that extends the [HyLAR](https://github.com/ucbl/HyLAR-Reasoner.git) inferencing engine to allow inferencing with SPARQL Construct queries
